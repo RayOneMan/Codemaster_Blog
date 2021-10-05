@@ -4,11 +4,7 @@
 
 ## What is the app?
 
-|
-|
-|
-|
-|
+__________________
 
 ## 1. Responsive Web Design Certification
 
