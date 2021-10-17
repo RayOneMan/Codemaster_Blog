@@ -1,0 +1,32 @@
+//-------------------------------------------------------------------------//
+%myBtn{
+    padding: 5px 15px;   
+    color: $mainCollor;
+    font-style: 14px;
+    border: 1px solid $mainCollor;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 1s;
+    &:hover {
+        background: #fff;
+        box-shadow: 0 0 10px $mainCollor, 0 0 40px $mainCollor,0 0 60px $mainCollor;
+        transition: .5s;
+    }
+}
+//-------------------------------------------------------------------------//
+%myInput{
+    width: 100%;
+    padding: 5px;
+    color: rgb(13, 79, 29);
+    transition: .5s;
+    border-radius: 10px;
+    &:focus{  
+        box-shadow: 0 0 10px $mainCollor, 0 0 40px $mainCollor;
+        transition: .5s;
+    }
+}
+//-------------------------------------------------------------------------//
+%mySelect{
+    margin: 5px 0;
+    border-radius: 5px;
+}

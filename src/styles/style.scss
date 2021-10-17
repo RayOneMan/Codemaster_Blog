@@ -1,0 +1,17 @@
+@import "~normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+@import "variables";
+@import "mixins";
+
+@import "parts/reset";
+@import "parts/header";
+@import "parts/content";
+@import "parts/createNewPost";
+@import "parts/myComponents";
+@import "parts/pagination";
+@import "parts/posts";
+@import "parts/searce";
+
+
+// other parts here

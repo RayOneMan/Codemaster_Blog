@@ -1,0 +1,24 @@
+$mainCollor:teal;
+//-------------------------------------------------------------------------//
+*{
+    margin: 0;
+    padding: 0;
+    border-style: border-box;
+}
+
+.page{
+    background-color: rgb(53, 52, 52);
+    font-family: 'IM Fell English SC', serif;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+//-------------------------------------------------------------------------//
+.line{
+    margin: 5px 0;
+    width: 996px;
+    border: 2px solid black;
+}
