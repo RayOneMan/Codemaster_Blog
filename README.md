@@ -14,7 +14,6 @@ __________________
 -   Applied Accessibility
 -   Responsive Web Design Principles
 -   CSS Flexbox
--   CSS Grid
 
 
 ## 2. JavaScript Algorithms and Data Structures Certification
@@ -24,7 +23,6 @@ __________________
 
 ## 3. Front End Libraries Certification
 
--   Bootstrap
 -   Sass
 -   React
 -   React router
