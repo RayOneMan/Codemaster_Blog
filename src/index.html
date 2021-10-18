@@ -1,4 +1,5 @@
 <!doctype html>
+<!--Тут язык английский, а на сайте используется русский.-->
 <html lang="en">
 
 <head>
@@ -11,31 +12,42 @@
 
 <body class="page">
     <header class="header">
-
-
+        <!-- Огромное количество ненужных пустых строк, это лишнее. Нужно убрать их.-->
+        <!-- С точки зрения UX кнопка логаута на этом месте - плохая идея. Обычно в этом месте (слева наверху) находится лого сайта,
+а кнопка логаута - самая правая -->
         <a href="#" class="header__link">Выйти</a>
         <ul class="header__list">
-            <li class="header__item"><a href="#" class="header__link">Посты</a></li>
-            <li class="header__item"><a href="#" class="header__link">О сайте</a></li>
+<!--            Форматирование неправильное. Старайся вложенные теги разносить по разным строкам. Вот пример-->
+<!--            Правильное применение БЭМа.-->
+            <li class="header__item">
+                <a href="#" class="header__link">Посты</a>
+            </li>
+            <li class="header__item">
+                <a href="#" class="header__link">О сайте</a>
+            </li>
         </ul>
     </header>
-
+<!--Убрать пустые строки-->
 
 
 
 
     <div class="container">
-
+<!--!!!!!Классы должны быть записаны в kebab-case, а не в camelCase нотации!!!!!-->
         <form class="createNewPost" action="">
             <div class="createNewPost__inputPost">
-                <div class="createNewPost__list-inputs"><input type="text" class="createNewPost__input"
-                        placeholder="Название поста"></div>
+<!--                Ужасное форматирование. Не надо стараться уместить всё в одной строке-->
+                <div class="createNewPost__list-inputs">
+                    <!--                Тут даже IDE ругается "Missing associated label"-->
+                    <input type="text" class="createNewPost__input"placeholder="Название поста">
+                </div>
                 <div class="createNewPost__list-inputs"><input type="text" class="createNewPost__input"
                         placeholder="Описание поста"></div>
             </div>
             <div><button type="submit" class="createNewPost__btn">Создать пост</button></div>
         </form>
         <div class="line"></div>
+<!--        опечатка, похоже -->
         <div class="searce">
             <input type="text" class="searce__input" placeholder="Поиск">
             <select class="searce__select">

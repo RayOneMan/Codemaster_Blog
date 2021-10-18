@@ -1,10 +1,12 @@
 //-------------------------------------------------------------------------//
+// Опечатка?. Форматирование
 .searce{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     &__input{
         @extend %myInput;
+        // Вот вообще не понимаю, в чем смысл делать контейнер 1000px а инпут 986px.
         width: 986px;
         margin: 5px 0;
     }

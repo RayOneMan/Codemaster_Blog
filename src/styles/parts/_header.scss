@@ -7,7 +7,7 @@
     justify-content: space-between;
     background-color: rgb(39,39,39);
     border-bottom: rgb(0, 0, 0) 3px solid;
-
+// Лишняя строка
     
     &__list {
         list-style-type: none;
@@ -17,6 +17,7 @@
         justify-content: center;
         text-align: center;
     }
+    // отсутствует перенос строки
     &__item {
         margin-left: 40px;
     }
@@ -24,7 +25,12 @@
         text-align: center;
         text-decoration: none;
         padding: 5px 15px;
+        // вынести цвет в переменную
         color: #fff;
+        // можно вынести в переменную. Представь, захотел ты, чтобы у тебя transition был везде не 0.5, а 1,
+        // если проект очень мелкий, то это не проблема везде поменять. В реальности такого не будет, и ты потратишь много
+        // времени на это, и со 100% вероятностью, ты что-то забудешь/не найдешь и не поменяешь. Вынеси это в переменную
+        // --button-transition-duration или типо того.
         transition: 0.5s;
         text-transform: uppercase;
 

@@ -11,6 +11,7 @@
         text-transform: uppercase;
         font-weight: 800;
         font-size: 40px;
+        // IDE ругается "Element 'mainCollor' is resolved only by name without use of explicit imports". И так во всех файлах
         text-shadow: 0 0 10px $mainCollor, 0 0 20px $mainCollor;
         
     }
@@ -31,6 +32,7 @@
         justify-content: space-between;
         flex: 1 1 auto;     
     }
+    // Нужно вынести стили для поста в отдельный файл.
     .post{
         &__list-btn{
             display: flex;
