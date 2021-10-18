@@ -1,3 +1,4 @@
+
 # CodeMasters
 
 ## Personal project - "Blog"
@@ -5,7 +6,16 @@
 ## What is the app?
 
 This application was created for educational purposes.
-__________________
+
+## Project setup
+```
+npm install
+```
+
+### Launch of the project
+```
+npm run start
+```
 
 ## 1. Responsive Web Design Certification
 
