@@ -38,11 +38,11 @@
             background: #fff;
             color: #2b1055;
             border-radius: 15px;
-            box-shadow: 0 0 10px teal, 0 0 40px teal;
+            box-shadow: 0 0 10px rgb(0, 128, 128), 0 0 40px rgb(0, 128, 128);
             transition: 0.5s;
         }
         &:active{
-            color: teal;
+            color: rgb(0, 128, 128);
         }
     }
 }

@@ -1,6 +1,6 @@
 <!doctype html>
-<!--Тут язык английский, а на сайте используется русский.-->
-<html lang="en">
+<!--Что за язык?-->
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
@@ -12,52 +12,42 @@
 
 <body class="page">
     <header class="header">
-        <!-- Огромное количество ненужных пустых строк, это лишнее. Нужно убрать их.-->
         <!-- С точки зрения UX кнопка логаута на этом месте - плохая идея. Обычно в этом месте (слева наверху) находится лого сайта,
 а кнопка логаута - самая правая -->
-        <a href="#" class="header__link">Выйти</a>
+        <a href="#" class="header__link">exit</a>
         <ul class="header__list">
-<!--            Форматирование неправильное. Старайся вложенные теги разносить по разным строкам. Вот пример-->
-<!--            Правильное применение БЭМа.-->
-            <li class="header__item">
-                <a href="#" class="header__link">Посты</a>
-            </li>
-            <li class="header__item">
-                <a href="#" class="header__link">О сайте</a>
-            </li>
+<!--            Не старайся всё уместить в 1 строчку. Вложенные теги должны быть на новой строке -->
+            <li class="header__item"><a href="#" class="header__link">list posts</a></li>
+            <li class="header__item"><a href="#" class="header__link">about</a></li>
         </ul>
     </header>
-<!--Убрать пустые строки-->
-
-
-
-
     <div class="container">
-<!--!!!!!Классы должны быть записаны в kebab-case, а не в camelCase нотации!!!!!-->
+<!--        Названия классов всегда в kebab-case-->
         <form class="createNewPost" action="">
             <div class="createNewPost__inputPost">
-<!--                Ужасное форматирование. Не надо стараться уместить всё в одной строке-->
+<!--                Ужасное форматирование. Не старайся всё уместить в 1 строчку. -->
                 <div class="createNewPost__list-inputs">
-                    <!--                Тут даже IDE ругается "Missing associated label"-->
-                    <input type="text" class="createNewPost__input"placeholder="Название поста">
+<!--                    Забыл label. Даже IDE ругается "Missing associated label" -->
+                    <input type="text" class="createNewPost__input" placeholder="Название поста">
                 </div>
                 <div class="createNewPost__list-inputs"><input type="text" class="createNewPost__input"
                         placeholder="Описание поста"></div>
             </div>
-            <div><button type="submit" class="createNewPost__btn">Создать пост</button></div>
+            <div><button type="submit" class="createNewPost__btn">Create new post</button></div>
         </form>
         <div class="line"></div>
-<!--        опечатка, похоже -->
+<!--        search??-->
         <div class="searce">
+<!--            русские placeholder заменить на английский-->
             <input type="text" class="searce__input" placeholder="Поиск">
             <select class="searce__select">
-                <option value="" selected disabled hidden>Сортировка</option>
-                <option value="1">По названию</option>
-                <option value="2">По размеру</option>
-                <option value="3">По дате</option>
+                <option value="" selected disabled hidden>Sorting</option>
+                <option value="1">Sort by title</option>
+                <option value="2">Sort by size</option>
+                <option value="3">Sort by date</option>
             </select>
             <select class="searce__select">
-                <option value="" selected disabled hidden>Кол-во постов на стринице</option>
+                <option value="" selected disabled hidden>Number of posts per page</option>
                 <option value="1">5</option>
                 <option value="2">10</option>
                 <option value="3">25</option>
@@ -70,7 +60,7 @@
             <div class="posts__list">
                 <div class="posts__item">
                     <div class="posts__content">
-                        <strong>1. Lorem </strong>
+                        <div class="post__title">1. Lorem </div>
                         <div class="post__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
                             architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
@@ -78,163 +68,118 @@
                         </div>
                     </div>
                     <div class="post__list-btn">
-                        <button class="post__btn">Открыть</button>
-                        <button class="post__btn">Удалить</button>
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
                     </div>
                 </div>
                 <div class="posts__item">
                     <div class="posts__content">
-                        <strong>1. Lorem </strong>
-                        <div>
+                        <div class="post__title">1. Lorem </div>
+                        <div class="post__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
                             architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
                             ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
                         </div>
                     </div>
                     <div class="post__list-btn">
-                        <button class="post__btn">Открыть</button>
-                        <button class="post__btn">Удалить</button>
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
                     </div>
                 </div>
                 <div class="posts__item">
                     <div class="posts__content">
-                        <strong>1. Lorem </strong>
-                        <div>
+                        <div class="post__title">1. Lorem </div>
+                        <div class="post__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
                             architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
                             ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
                         </div>
                     </div>
                     <div class="post__list-btn">
-                        <button class="post__btn">Открыть</button>
-                        <button class="post__btn">Удалить</button>
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
                     </div>
                 </div>
                 <div class="posts__item">
                     <div class="posts__content">
-                        <strong>1. Lorem </strong>
-                        <div>
-                            Lorem ipsum dolor sit amet. </div>
-                    </div>
-                    <div class="post__list-btn">
-                        <button class="post__btn">Открыть</button>
-                        <button class="post__btn">Удалить</button>
-                    </div>
-                </div>
-                <div class="posts__item">
-                    <div class="posts__content">
-                        <strong>1. Lorem </strong>
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
+                        <div class="post__title">1. Lorem </div>
+                        <div class="post__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
                             architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
                             ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
                         </div>
                     </div>
                     <div class="post__list-btn">
-                        <button class="post__btn">Открыть</button>
-                        <button class="post__btn">Удалить</button>
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
                     </div>
                 </div>
                 <div class="posts__item">
                     <div class="posts__content">
-                        <strong>1. Lorem </strong>
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
-                            architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
-                            ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
+                        <div class="post__title">1. Lorem </div>
+                        <div class="post__text">
+                            Lorem
+                        </div>
+                    </div>
+                    <div class="post__list-btn">
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
+                    </div>
+                </div>
+                <div class="posts__item">
+                    <div class="posts__content">
+                        <div class="post__title">1. Lorem </div>
+                        <div class="post__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
                             architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
                             ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
                         </div>
                     </div>
                     <div class="post__list-btn">
-                        <button class="post__btn">Открыть</button>
-                        <button class="post__btn">Удалить</button>
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
                     </div>
                 </div>
                 <div class="posts__item">
                     <div class="posts__content">
-                        <strong>1. Lorem </strong>
-                        <div>
+                        <div class="post__title">1. Lorem </div>
+                        <div class="post__text">
+                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium ipsa itaque consequuntur ullam unde explicabo doloribus necessitatibus voluptatem maxime, temporibus voluptatibus. Vel perspiciatis rerum, odit sint eaque minima. Consequuntur ut sapiente doloribus inventore, reprehenderit quia fugiat nulla iure laboriosam porro commodi nobis velit saepe necessitatibus possimus deserunt dicta nesciunt dolorum dolore, explicabo in. Tempore suscipit explicabo temporibus, voluptatum maiores blanditiis incidunt laboriosam voluptatem ipsam inventore officia consectetur maxime dolorem itaque aut illum atque reprehenderit rem impedit fugiat voluptates! Incidunt modi id ex eum doloremque, delectus ducimus velit vitae omnis provident sequi laboriosam rerum ullam vero illo consectetur temporibus voluptates placeat?
+                        </div>
+                    </div>
+                    <div class="post__list-btn">
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
+                    </div>
+                </div>
+                <div class="posts__item">
+                    <div class="posts__content">
+                        <div class="post__title">1. Lorem </div>
+                        <div class="post__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
                             architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
                             ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
                         </div>
                     </div>
                     <div class="post__list-btn">
-                        <button class="post__btn">Открыть</button>
-                        <button class="post__btn">Удалить</button>
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
                     </div>
                 </div>
                 <div class="posts__item">
                     <div class="posts__content">
-                        <strong>1. Lorem </strong>
-                        <div>
+                        <div class="post__title">1. Lorem </div>
+                        <div class="post__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia laboriosam
                             architecto aspernatur eos perspiciatis eius expedita mollitia dolorum hic rem corrupti
                             ducimus rerum, ipsa, consequatur minus. Iure, delectus eos!
                         </div>
                     </div>
                     <div class="post__list-btn">
-                        <button class="post__btn">Открыть</button>
-                        <button class="post__btn">Удалить</button>
+                        <button class="post__btn">open</button>
+                        <button class="post__btn">delete</button>
                     </div>
                 </div>
-
 
             </div>
         </div>
@@ -251,7 +196,6 @@
             <button class="pagination__btn">10</button>
         </div>
     </div>
-
 </body>
 
 </html>
