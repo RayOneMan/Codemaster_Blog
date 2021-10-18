@@ -23,7 +23,7 @@
     }
     &__item{
         color: rgb(255, 255, 255);
-        min-width: 900px;
+        max-width: 900px;
         display: flex;
         padding: 15px;
         border: 2px solid rgb(1, 61, 61);
@@ -39,6 +39,9 @@
         &__btn{
             @extend %myBtn;
             margin: 2px;
+        }
+        &__title{
+            font-weight: 800;
         }
         &__text{
             margin: 0 10px 0 0;
