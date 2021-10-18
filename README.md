@@ -4,6 +4,7 @@
 
 ## What is the app?
 
+This application was created for educational purposes.
 __________________
 
 ## 1. Responsive Web Design Certification
