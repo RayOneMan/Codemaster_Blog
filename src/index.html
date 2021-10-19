@@ -1,4 +1,5 @@
 <!doctype html>
+<!--Что за язык?-->
 <html lang="zxx">
 
 <head>
@@ -11,24 +12,33 @@
 
 <body class="page">
     <header class="header">
+        <!-- С точки зрения UX кнопка логаута на этом месте - плохая идея. Обычно в этом месте (слева наверху) находится лого сайта,
+а кнопка логаута - самая правая -->
         <a href="#" class="header__link">exit</a>
         <ul class="header__list">
+<!--            Не старайся всё уместить в 1 строчку. Вложенные теги должны быть на новой строке -->
             <li class="header__item"><a href="#" class="header__link">list posts</a></li>
             <li class="header__item"><a href="#" class="header__link">about</a></li>
         </ul>
     </header>
     <div class="container">
+<!--        Названия классов всегда в kebab-case-->
         <form class="createNewPost" action="">
             <div class="createNewPost__inputPost">
-                <div class="createNewPost__list-inputs"><input type="text" class="createNewPost__input"
-                        placeholder="Название поста"></div>
+<!--                Ужасное форматирование. Не старайся всё уместить в 1 строчку. -->
+                <div class="createNewPost__list-inputs">
+<!--                    Забыл label. Даже IDE ругается "Missing associated label" -->
+                    <input type="text" class="createNewPost__input" placeholder="Название поста">
+                </div>
                 <div class="createNewPost__list-inputs"><input type="text" class="createNewPost__input"
                         placeholder="Описание поста"></div>
             </div>
             <div><button type="submit" class="createNewPost__btn">Create new post</button></div>
         </form>
         <div class="line"></div>
+<!--        search??-->
         <div class="searce">
+<!--            русские placeholder заменить на английский-->
             <input type="text" class="searce__input" placeholder="Поиск">
             <select class="searce__select">
                 <option value="" selected disabled hidden>Sorting</option>
