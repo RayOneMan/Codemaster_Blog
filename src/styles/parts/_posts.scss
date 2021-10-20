@@ -1,29 +1,26 @@
-// УБРАТь
-//-------------------------------------------------------------------------//
 .posts {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &__title{
-        color: $mainCollor;
-        margin-bottom: 10px;
+    &__title {
+        color: $main-color;
+        margin: 10px 0;
         letter-spacing: 3px;
         text-transform: uppercase;
         font-weight: 800;
         font-size: 40px;
-        // IDE ругается "Element 'mainCollor' is resolved only by name without use of explicit imports". И так во всех файлах
-        text-shadow: 0 0 10px $mainCollor, 0 0 20px $mainCollor;
-        
+        // IDE ругается "Element 'main-color' is resolved only by name without use of explicit imports". И так во всех файлах (????)
     }
-    &__list{
-        border: 3px solid $mainCollor;
+    &__list {
+        margin: 20px;
+        border: 3px solid $main-color;
         border-radius: 10px;
         padding: 15px 20px;
-        background: rgb(39,39,39);
-        box-shadow: 10px 10px 10px 5px rgba(0, 0, 255, .2);
+        background: rgb(39, 39, 39);
+        box-shadow: 10px 10px 10px 5px rgba(0, 0, 255, 0.2);
     }
-    &__item{
+    &__item {
         color: rgb(255, 255, 255);
         max-width: 900px;
         display: flex;
@@ -31,23 +28,6 @@
         border: 2px solid rgb(1, 61, 61);
         margin: 10px 0;
         justify-content: space-between;
-        flex: 1 1 auto;     
-    }
-    // Нужно вынести стили для поста в отдельный файл.
-    .post{
-        &__list-btn{
-            display: flex;
-            align-items: flex-start;
-        }
-        &__btn{
-            @extend %myBtn;
-            margin: 2px;
-        }
-        &__title{
-            font-weight: 800;
-        }
-        &__text{
-            margin: 0 10px 0 0;
-        }
+        flex: 1 1 auto;
     }
 }

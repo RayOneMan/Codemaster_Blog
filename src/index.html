@@ -1,52 +1,51 @@
 <!doctype html>
-<!--Что за язык?-->
-<html lang="zxx">
+<html lang="eng">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
 </head>
-
 <body class="page">
     <header class="header">
-        <!-- С точки зрения UX кнопка логаута на этом месте - плохая идея. Обычно в этом месте (слева наверху) находится лого сайта,
-а кнопка логаута - самая правая -->
-        <a href="#" class="header__link">exit</a>
+        <a href="#"  class="header__logo">Logo</a>
         <ul class="header__list">
-<!--            Не старайся всё уместить в 1 строчку. Вложенные теги должны быть на новой строке -->
-            <li class="header__item"><a href="#" class="header__link">list posts</a></li>
-            <li class="header__item"><a href="#" class="header__link">about</a></li>
+            <li class="header__item">
+                <a href="#" class="header__link">list posts</a>
+            </li>
+            <li class="header__item">
+                <a href="#" class="header__link">about</a>
+            </li>
+            <li class="header__item">
+                <a href="#" class="header__link">exit</a>
+            </li>
         </ul>
     </header>
     <div class="container">
-<!--        Названия классов всегда в kebab-case-->
-        <form class="createNewPost" action="">
-            <div class="createNewPost__inputPost">
-<!--                Ужасное форматирование. Не старайся всё уместить в 1 строчку. -->
-                <div class="createNewPost__list-inputs">
-<!--                    Забыл label. Даже IDE ругается "Missing associated label" -->
-                    <input type="text" class="createNewPost__input" placeholder="Название поста">
+        <form class="create-new-post" action="">
+            <div class="create-new-post__inputPost">
+                <div class="create-new-post__list-inputs">
+                    <input type="text" class="create-new-post__input" placeholder="Title post">
                 </div>
-                <div class="createNewPost__list-inputs"><input type="text" class="createNewPost__input"
-                        placeholder="Описание поста"></div>
+                <div class="create-new-post__list-inputs">
+                    <input type="text" class="create-new-post__input" placeholder="Post description">
+                </div>
             </div>
-            <div><button type="submit" class="createNewPost__btn">Create new post</button></div>
+            <div>
+                <button type="submit" class="create-new-post__btn">Create new post</button>
+            </div>
         </form>
         <div class="line"></div>
-<!--        search??-->
-        <div class="searce">
-<!--            русские placeholder заменить на английский-->
-            <input type="text" class="searce__input" placeholder="Поиск">
-            <select class="searce__select">
+        <div class="search">
+            <input type="text" class="search__input" placeholder="Search">
+            <select class="search__select">
                 <option value="" selected disabled hidden>Sorting</option>
                 <option value="1">Sort by title</option>
                 <option value="2">Sort by size</option>
                 <option value="3">Sort by date</option>
             </select>
-            <select class="searce__select">
+            <select class="search__select">
                 <option value="" selected disabled hidden>Number of posts per page</option>
                 <option value="1">5</option>
                 <option value="2">10</option>
@@ -54,9 +53,7 @@
             </select>
         </div>
         <div class="posts">
-            <div class="posts__title">
-                Posts list
-            </div>
+            <div class="posts__title">Posts list</div>
             <div class="posts__list">
                 <div class="posts__item">
                     <div class="posts__content">
@@ -144,7 +141,16 @@
                     <div class="posts__content">
                         <div class="post__title">1. Lorem </div>
                         <div class="post__text">
-                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium ipsa itaque consequuntur ullam unde explicabo doloribus necessitatibus voluptatem maxime, temporibus voluptatibus. Vel perspiciatis rerum, odit sint eaque minima. Consequuntur ut sapiente doloribus inventore, reprehenderit quia fugiat nulla iure laboriosam porro commodi nobis velit saepe necessitatibus possimus deserunt dicta nesciunt dolorum dolore, explicabo in. Tempore suscipit explicabo temporibus, voluptatum maiores blanditiis incidunt laboriosam voluptatem ipsam inventore officia consectetur maxime dolorem itaque aut illum atque reprehenderit rem impedit fugiat voluptates! Incidunt modi id ex eum doloremque, delectus ducimus velit vitae omnis provident sequi laboriosam rerum ullam vero illo consectetur temporibus voluptates placeat?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium ipsa itaque
+                            consequuntur ullam unde explicabo doloribus necessitatibus voluptatem maxime, temporibus
+                            voluptatibus. Vel perspiciatis rerum, odit sint eaque minima. Consequuntur ut sapiente
+                            doloribus inventore, reprehenderit quia fugiat nulla iure laboriosam porro commodi nobis
+                            velit saepe necessitatibus possimus deserunt dicta nesciunt dolorum dolore, explicabo in.
+                            Tempore suscipit explicabo temporibus, voluptatum maiores blanditiis incidunt laboriosam
+                            voluptatem ipsam inventore officia consectetur maxime dolorem itaque aut illum atque
+                            reprehenderit rem impedit fugiat voluptates! Incidunt modi id ex eum doloremque, delectus
+                            ducimus velit vitae omnis provident sequi laboriosam rerum ullam vero illo consectetur
+                            temporibus voluptates placeat?
                         </div>
                     </div>
                     <div class="post__list-btn">
@@ -180,7 +186,6 @@
                         <button class="post__btn">delete</button>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="pagination">
@@ -197,5 +202,4 @@
         </div>
     </div>
 </body>
-
 </html>

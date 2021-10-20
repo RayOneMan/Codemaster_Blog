@@ -1,0 +1,17 @@
+.create-new-post {
+    display: flex;
+    flex-direction: column;
+
+    &__list-inputs {
+        margin: 5px 10px 0 10px;
+    }
+
+    &__input {
+        @extend %input;
+    }
+
+    &__btn {
+        @extend %btn;
+        margin: 5px 10px 0 10px;
+    }
+}

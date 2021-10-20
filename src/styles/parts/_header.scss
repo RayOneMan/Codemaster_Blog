@@ -5,44 +5,50 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(39,39,39);
-    border-bottom: rgb(0, 0, 0) 3px solid;
-// Лишняя строка
-    
+    background-color: $header-bg-color;
+    border-bottom: #000000 3px solid;
+
+    &__logo {
+        color: $header-logo-color;
+        font-weight: 700;
+        font-size: 2em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 10px;
+        transition: $transition-duration;
+        &:hover {
+            background: $header-bg-link-color;
+            color: $header-logo-hover-color;
+            box-shadow: 0 0 10px $main-color, 0 0 40px $main-color;
+            transition: $transition-duration;
+        }
+    }
+
     &__list {
         list-style-type: none;
-        margin: 0;
-        padding: 0;
         display: flex;
         justify-content: center;
         text-align: center;
+        flex-wrap: wrap;
     }
-    // отсутствует перенос строки
-    &__item {
-        margin-left: 40px;
-    }
+
     &__link {
         text-align: center;
         text-decoration: none;
-        padding: 5px 15px;
-        // вынести цвет в переменную
-        color: #fff;
-        // можно вынести в переменную. Представь, захотел ты, чтобы у тебя transition был везде не 0.5, а 1,
-        // если проект очень мелкий, то это не проблема везде поменять. В реальности такого не будет, и ты потратишь много
-        // времени на это, и со 100% вероятностью, ты что-то забудешь/не найдешь и не поменяешь. Вынеси это в переменную
-        // --button-transition-duration или типо того.
-        transition: 0.5s;
+        padding: 5px 10px;
+        margin: 0 15px;
+        color: $header-link-color;
+        transition: $transition-duration;
         text-transform: uppercase;
+        border-radius: 15px;
 
         &:hover {
-            background: #fff;
-            color: #2b1055;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgb(0, 128, 128), 0 0 40px rgb(0, 128, 128);
-            transition: 0.5s;
-        }
-        &:active{
-            color: rgb(0, 128, 128);
+            background: $header-bg-link-color;
+            color: $header-link-hover-color;
+            box-shadow: 0 0 10px $main-color, 0 0 40px $main-color;
+            transition: $transition-duration;
         }
     }
 }

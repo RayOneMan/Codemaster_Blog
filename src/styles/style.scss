@@ -1,17 +1,16 @@
 @import "~normalize.css";
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
-// Не получается найти эти файлы. Даже IDE ругается
-@import "variables";
-@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
+@import "global/variables";
+@import "global/mixins";
 
 @import "parts/reset";
 @import "parts/header";
 @import "parts/content";
-@import "parts/createNewPost";
-@import "parts/myComponents";
+@import "parts/create-new-post";
+@import "parts/components";
 @import "parts/pagination";
 @import "parts/posts";
-@import "parts/searce";
-
+@import "parts/post";
+@import "parts/search";
 
 // other parts here
