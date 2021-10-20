@@ -18,6 +18,7 @@
         padding: 5px;
         border-radius: 10px;
         transition: $transition-duration;
+
         &:hover {
             background: $header-bg-link-color;
             color: $header-logo-hover-color;
@@ -43,7 +44,7 @@
         transition: $transition-duration;
         text-transform: uppercase;
         border-radius: 15px;
-
+        
         &:hover {
             background: $header-bg-link-color;
             color: $header-link-hover-color;

@@ -7,6 +7,7 @@
     border-radius: 10px;
     transition: 1s;
     text-transform: uppercase;
+
     &:hover {
         background: #fff;
         box-shadow: 0 0 10px $main-color, 0 0 40px $main-color, 0 0 60px $main-color;
@@ -21,6 +22,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     width: 100%;
+
     &:focus {
         box-shadow: 0 0 10px $main-color, 0 0 40px $main-color;
         transition: $transition-duration;
@@ -29,6 +31,7 @@
 
 %select {
     border-radius: 5px;
+    
     &:focus {
         box-shadow: 0 0 10px $main-color, 0 0 40px $main-color;
         transition: $transition-duration;

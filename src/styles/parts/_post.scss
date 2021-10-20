@@ -3,13 +3,16 @@
         display: flex;
         align-items: flex-start;
     }
+
     &__btn {
         @extend %btn;
         margin: 2px;
     }
+
     &__title {
         font-weight: 800;
     }
+
     &__text {
         margin: 0 10px 0 0;
     }
