@@ -16,7 +16,7 @@
 @function unfoldTransition($transition) {
   // Default values
   $property: all;
-  $duration: .2s;
+  $duration: 0.2s;
   $easing: linear; // Browser default is ease, which is what we want
   $delay: null; // Browser default is 0, which is what we want
   $defaultProperties: ($property, $duration, $easing, $delay);
@@ -26,9 +26,9 @@
   @for $i from 1 through length($defaultProperties) {
     $p: null;
     @if $i <= length($transition) {
-      $p: nth($transition, $i)
+      $p: nth($transition, $i);
     } @else {
-      $p: nth($defaultProperties, $i)
+      $p: nth($defaultProperties, $i);
     }
     $unfoldedTransition: append($unfoldedTransition, $p);
   }
