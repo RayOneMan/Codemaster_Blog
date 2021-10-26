@@ -3,7 +3,7 @@ import NumberOfPostPerPage from './NumberOfPostPerPage';
 import Sorting from './Sorting';
 
 import "./Search.scss";
-
+// много лишних пустых строк, это недопустимо
 
 
 export default class Search extends Component {

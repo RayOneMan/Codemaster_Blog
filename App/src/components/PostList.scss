@@ -1,5 +1,6 @@
 @import "variables.scss";
 
+//почти весь этот файл ошибка по БЭМ, эти стили отдельных блоков, а не элементов
 .posts {
     display: flex;
     flex-direction: column;
@@ -23,6 +24,7 @@
         background: $main-color;
     }
 
+    // некорректный БЭМ, здесь почти всё является стилями блока .post, у которого отдельный файл
     &__item {
         color: $light-color;
         max-width: 900px;

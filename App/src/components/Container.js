@@ -12,9 +12,13 @@ export default class Conteiner extends Component {
         return (
             <div className="container">
                 <CreateNewPost />
+
+                {/*этот компонент лучше не создавать, а сделать просто div.line вокруг CreateNewPost в данном случае, компонент не будет иметь логики и разметки*/}
                 <Line />
+
                 <Search />
                 <PostList />
+                {/*paggination -> pagination*/}
                 <Paggination />
             </div>
         )

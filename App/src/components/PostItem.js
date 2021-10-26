@@ -15,6 +15,7 @@ export default class PostItem extends Component {
                     </div>
                 </div>
                 <div className="post__list-btn">
+                    {/*где type у кнопок? говорил об этом ранее*/}
                     <button className="post__btn">open</button>
                     <button className="post__btn">delete</button>
                 </div>

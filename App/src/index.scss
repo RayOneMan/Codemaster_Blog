@@ -1,4 +1,5 @@
 @import "~normalize.css";
+// иконки подключают через html, через css это блокирует дальнейшую загрузку пока не загрузятся
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 body {

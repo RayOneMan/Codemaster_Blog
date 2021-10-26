@@ -12,6 +12,8 @@
   &__logo {
     text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $second-color, 0 0 0.5em $second-color, 0 0 0.1em $second-color,
       0 10px 3px $main-color;
+
+    //недопустимо по БЭМ, надо исправить на элемент
     .logo span {
       animation: blink linear infinite 4s;
     }

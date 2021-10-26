@@ -9,6 +9,7 @@ export default class PostList extends Component {
             <div className="posts">
                 <div className="posts__title">Posts list</div>
                 <div className="posts__list">
+                    {/*погугли как делают циклы в реакте*/}
                     <PostItem />
                     <PostItem />
                     <PostItem />
