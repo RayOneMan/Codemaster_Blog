@@ -2,5 +2,6 @@
 
 .page {
     font-family: "Roboto", sans-serif;
+    // картинки должны быть частью твоего репозитория, а не браться откуда-то с третьего ресурса, это недопустимо
     background: url("https://static-dm.akamaized.net/legion/prod/9b06ac9234ec6039759f252d93b3778d.png"), $bg-color;
 }

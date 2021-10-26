@@ -12,6 +12,9 @@ export default class App extends Component {
             <div className="page">
                 <Header />
                 <SvgHeader />
+
+                {/*conteinter -> container*/}
+                {/*этот компонент лишний, не делает ничего полезного*/}
                 <Conteiner />
             </div>
         )

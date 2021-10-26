@@ -2,6 +2,8 @@ import { Component } from 'react';
 
 import "./CreateNewPost.scss";
 
+// плохое имя для компонента, потому что форма будет переиспользоваться для редактирования поста тоже,
+// лучше PostForm, PostEdit
 export default class CreateNewPost extends Component {
     render() {
         return (
