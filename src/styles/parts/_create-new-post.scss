@@ -13,5 +13,8 @@
     &__btn {
         @extend %btn;
         margin: 5px 10px 0 10px;
+        &:hover {
+            box-shadow: 0 0 10px $main-color, 0 0 40px $main-color, 0 0 60px $main-color;
+        }
     }
 }

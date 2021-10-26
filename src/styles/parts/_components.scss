@@ -9,15 +9,14 @@
     text-transform: uppercase;
 
     &:hover {
-        background: #fff;
-        box-shadow: 0 0 10px $main-color, 0 0 40px $main-color, 0 0 60px $main-color;
+        background: $light-color;
         transition: $transition-duration;
     }
 }
 
 %input {
     padding: 5px;
-    color: rgb(13, 79, 29);
+    color: $main-color;
     transition: $transition-duration;
     border-radius: 10px;
     box-sizing: border-box;

@@ -7,6 +7,9 @@
     &__btn {
         @extend %btn;
         margin: 2px;
+        &:hover {
+            box-shadow: 0 0 10px $second-color, 0 0 20px $second-color;
+        }
     }
 
     &__title {
