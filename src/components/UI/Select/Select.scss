@@ -1,0 +1,10 @@
+@import "variables.scss";
+
+%select {
+    border-radius: 5px;
+
+    &:focus {
+        box-shadow: 0 0 10px $main-color, 0 0 40px $main-color;
+        transition: $transition-duration;
+    }
+}
