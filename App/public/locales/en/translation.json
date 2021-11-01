@@ -1,0 +1,16 @@
+{
+        "LOGO": "Logo",
+        "LIST_POSTS": "List Post",
+        "ABOUT": "About",
+        "EXIT": "Exit",
+        "LANG": "Language",
+        "TITLE_POST": "Title post",
+        "POST_DESCRIPTION": "Post description",
+        "CREATE_NEW_POST": "Create new post",
+        "SEARCH": "Search",
+        "SORT": "Sorting",
+        "NUMBER_OF_POSTS_PER_PAGE": "Number of posts per page",
+        "POST_LIST": "Post list",
+        "OPEN": "Open",
+        "DELETE": "Delete"
+}

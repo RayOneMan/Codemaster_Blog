@@ -6,33 +6,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 
     &__title {
-        color: $main-color;
-        margin: 10px 0;
         letter-spacing: 3px;
         text-transform: uppercase;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 40px;
     }
 
     &__list {
+        width: 100%;
+        box-sizing: border-box;
         margin: 20px;
-        border: 3px solid $main-color;
+        border: 3px solid $dark-color;
         border-radius: 10px;
         padding: 15px 20px;
-        background: $main-color;
-    }
-
-    // некорректный БЭМ, здесь почти всё является стилями блока .post, у которого отдельный файл
-    &__item {
-        color: $light-color;
-        max-width: 900px;
-        display: flex;
-        padding: 15px;
-        border: 2px solid $second-color;
-        margin: 10px 0;
-        justify-content: space-between;
-        flex: 1 1 auto;
+        background: #1a1b22;
     }
 }

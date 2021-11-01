@@ -1,0 +1,16 @@
+{
+    "LOGO": "Logo",
+    "LIST_POSTS": "Listenbeitrag",
+    "ABOUT": "Über",
+    "EXIT": "Ausgang",
+    "LANG": "Sprache",
+    "TITLE_POST": "Titelbeitrag",
+    "POST_DESCRIPTION": "Beschreibung des Beitrags",
+    "CREATE_NEW_POST": "Neuen Beitrag erstellen",
+    "SEARCH": "Suche",
+    "SORT": "Sortierung",
+    "NUMBER_OF_POSTS_PER_PAGE": "Anzahl der Beiträge pro Seite",
+    "POST_LIST": "Beitragsliste",
+    "OPEN": "Offen",
+    "DELETE": "Löschen"
+}

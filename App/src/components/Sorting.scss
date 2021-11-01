@@ -1,16 +1,7 @@
 @import "variables.scss";
 @import "../components/UI/Select/Select.scss";
 
-//копипаста существующего кода, недопустимо
-// блок .search не может появиться внутри компонента Sorting никак
-.search {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 5px 10px 0 10px;
-
-    &__select {
-        @extend %select;
-        margin-top: 10px;
-    }
+.search__select {
+    @extend %select;
+    margin-top: 10px;
 }

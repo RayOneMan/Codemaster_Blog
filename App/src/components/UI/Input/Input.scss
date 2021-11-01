@@ -1,14 +1,13 @@
-//в такие файлы есть смысл явно пробрасывать variables.scss, а не полагаться на порядок подключения в родительском файле
+@import "variables.scss";
+
 %input {
-    padding: 5px;
-    color: $main-color;
     transition: $transition-duration;
     border-radius: 10px;
     box-sizing: border-box;
     width: 100%;
 
     &:focus {
-        box-shadow: 0 0 10px $main-color, 0 0 40px $main-color;
         transition: $transition-duration;
+        background: $input-bg;
     }
 }

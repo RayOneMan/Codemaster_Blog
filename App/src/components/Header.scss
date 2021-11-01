@@ -3,78 +3,60 @@
 .header {
   box-sizing: border-box;
   width: 100%;
-  padding: 15px 30px;
+  padding: 15px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $main-color;
+  background-color: $dark-color;
 
   &__logo {
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $second-color, 0 0 0.5em $second-color, 0 0 0.1em $second-color,
-      0 10px 3px $main-color;
-
-    //недопустимо по БЭМ, надо исправить на элемент
-    .logo span {
-      animation: blink linear infinite 4s;
-    }
-    @keyframes blink {
-      20% {
-        color: inherit;
-        text-shadow: inherit;
-      }
-      40% {
-        color: #333;
-      }
-      60% {
-        text-shadow: none;
-      }
-      80% {
-        color: inherit;
-        text-shadow: inherit;
-      }
-      90% {
-        color: #333;
-        text-shadow: none;
-      }
-      100% {
-        color: inherit;
-        text-shadow: inherit;
-      }
-    }
-
     color: $light-color;
     font-weight: 700;
     font-size: 2em;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 5px;
+    padding: 15px;
     margin: 0 15px;
+    border-radius: 10px;
+    transition: $transition-duration;
+    &:hover {
+      background: $light-color;
+      color: $dark-color;
+    }
   }
 
   &__list {
+    align-items: center;
     list-style-type: none;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
   }
+  &__item {
+    &:hover {
+      .translate__submenu,
+      .translate__submenu:hover {
+        visibility: visible;
+        color: $light-color;
+      }
+    }
+  }
 
   &__link {
+    font-size: 24px;
     text-align: center;
     text-decoration: none;
     color: $light-color;
     transition: $transition-duration;
-    padding: 5px 10px;
-    margin: 0 15px;
+    padding: 15px 5px;
+    margin: 0 30px;
     text-transform: uppercase;
-    border-radius: 15px;
-
+    border-radius: 5px;
     &:hover {
       background: $light-color;
-      color: $main-color;
-      box-shadow: 0 0 10px $second-color, 0 0 20px $second-color;
-      transition: $transition-duration;
+      color: $dark-color;
     }
   }
 
@@ -85,7 +67,41 @@
   }
 }
 
-@media (max-width: 580px) {
+.translate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $light-color;
+  position: relative;
+  &__submenu {
+    background: $dark-color;
+    visibility: hidden;
+    list-style: none;
+    text-align: center;
+    padding: 0 15px 20px 15px;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: 55px;
+   
+  }
+
+  &__item {
+    text-transform: uppercase;
+    background: $dark-color;
+    margin-top: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover {
+      transition: $transition-duration;
+      border-radius: 5px;
+      color: $dark-color;
+      background: $light-color;
+    }
+  }
+
+
+} //исправить
+@media (max-width: 861px) {
   .header {
     &__list {
       display: none;

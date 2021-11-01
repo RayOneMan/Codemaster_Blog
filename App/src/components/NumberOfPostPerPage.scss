@@ -2,13 +2,7 @@
 @import "./UI/Select/Select.scss";
 @import "./UI/Input/Input.scss";
 
-//этот файл целиком копипста Search.scss, так нельзя
 .search {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 5px 10px 0 10px;
-
     &__input {
         @extend %input;
     }
