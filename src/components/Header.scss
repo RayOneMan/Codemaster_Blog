@@ -73,6 +73,7 @@
   align-items: center;
   color: $light-color;
   position: relative;
+
   &__submenu {
     background: $dark-color;
     visibility: hidden;
@@ -84,19 +85,16 @@
     margin-top: 55px;
    
   }
-
+&__menu{
+  border-radius: 10px;
+  background: $dark-color;
+  color: $light-color;
+  padding: 10px;
+  text-transform: uppercase;
+}
   &__item {
-    text-transform: uppercase;
+    color: white;
     background: $dark-color;
-    margin-top: 20px;
-    padding: 5px 10px;
-    cursor: pointer;
-    &:hover {
-      transition: $transition-duration;
-      border-radius: 5px;
-      color: $dark-color;
-      background: $light-color;
-    }
   }
 
 

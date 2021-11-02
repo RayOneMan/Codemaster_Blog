@@ -14,7 +14,7 @@ export default function PostForm() {
                 </div>
             </div>
             <div>
-                <button type="submit" className="create-new-post__btn">{t("CREATE_NEW_POST")}</button>
+                <button type="button" className="create-new-post__btn">{t("CREATE_NEW_POST")}</button>
             </div>
         </form>
     );

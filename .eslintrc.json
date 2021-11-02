@@ -18,13 +18,10 @@
         "react"
     ],
     "rules": {
+        "max-len": "off",
         "indent": [
             "warn",
             4
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
         ],
         "quotes": [
             "error",
@@ -37,10 +34,18 @@
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [
             1,
-            { 
-                "extensions": [".js", ".jsx"]
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
             }
         ],
         "react/prop-types": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

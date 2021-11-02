@@ -1,3 +1,4 @@
+// import React, { useState } from "react";
 import Header from "./Header";
 import PostForm from "./PostForm";
 import Search from "./Search";
@@ -5,6 +6,7 @@ import PostList from "./PostList";
 import Pagination from "./Pagination";
 
 import "./App.scss";
+// import Modal from "./UI/Modal/Modal";
 
 const data = [
     { id: 1, title: "Title 1", content_text: "Discription 1" },
@@ -21,11 +23,16 @@ const data = [
 ];
 
 
+
 export default function App() {
+    // const [modalActive, setModalActive] = useState(true);
     return (
         <div className="page">
+            {/* <Modal active={modalActive} setActive={setModalActive} /> */}
             <Header />
             <div className="container">
+                {/* <button onClick={() => setModalActive(true)}>Открыть</button>
+                <Modal/> */}
                 <PostForm />
                 <div className="line"></div>
                 <Search />
