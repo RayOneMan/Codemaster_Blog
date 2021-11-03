@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 export default function NumberOfPostPerPage() {
     const {t} = useTranslation();
+    
     return (
         <select className="search__select" defaultValue={"DEFAULT"}>
             <option value="DEFAULT" disabled>{t("NUMBER_OF_POSTS_PER_PAGE")}</option>

@@ -3,13 +3,10 @@ import { useTranslation } from "react-i18next";
 
 import "./PostList.scss";
 
-export default function PostList({ info }) {
-
-
-    const renderPostItem = info.map(item => {
-        return (<PostItem key={item.id} title_name={item.title} id={item.id} content_text={item.content_text} />);
+export default function PostList({ posts }) {
+    const renderPostItem = posts.map(item => {
+        return (<PostItem key={item.id} title={item.title} id={item.id} body={item.body} />);
     });
-
     const {t} = useTranslation();
 
     return (

@@ -9,6 +9,8 @@
     "CREATE_NEW_POST": "Neuen Beitrag erstellen",
     "SEARCH": "Suche",
     "SORT": "Sortierung",
+    "SORT_BY_TITLE": "Sortierung nach Titel",
+    "SORT_BY_DISCRIPTION": "Nach Beschreibung sortieren",
     "NUMBER_OF_POSTS_PER_PAGE": "Anzahl der Beiträge pro Seite",
     "POST_LIST": "Beitragsliste",
     "OPEN": "Offen",

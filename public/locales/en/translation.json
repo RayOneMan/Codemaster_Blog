@@ -9,6 +9,8 @@
         "CREATE_NEW_POST": "Create new post",
         "SEARCH": "Search",
         "SORT": "Sorting",
+        "SORT_BY_TITLE": "Sorting by title",
+        "SORT_BY_DISCRIPTION": "Sorting by discription",
         "NUMBER_OF_POSTS_PER_PAGE": "Number of posts per page",
         "POST_LIST": "Post list",
         "OPEN": "Open",

@@ -1,15 +1,14 @@
 import "./PostItem.scss";
 import { useTranslation } from "react-i18next";
 
-
-export default function PostItem({ id, title_name, content_text }) {
+export default function PostItem({ id, title, body }) {
     const { t } = useTranslation();
     return (
         <div className="post__item">
             <div className="posts__content">
-                <div className="post__title">{id}. {title_name} </div>
+                <div className="post__title">{id}. {title} </div>
                 <div className="post__text">
-                    {content_text}
+                    {body}
                 </div>
             </div>
             <div className="post__list-btn">
