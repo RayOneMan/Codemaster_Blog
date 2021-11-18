@@ -1,7 +1,0 @@
-@import "variables.scss";
-@import "../components/UI/Select/Select.scss";
-
-.search__select {
-    @extend %select;
-    margin-top: 10px;
-}

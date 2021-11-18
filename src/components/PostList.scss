@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
 
     &__title {
         letter-spacing: 3px;
@@ -20,8 +20,24 @@
         box-sizing: border-box;
         margin: 20px;
         border: 3px solid $dark-color;
-        border-radius: 10px;
+        border-radius: 30px;
         padding: 15px 20px;
         background: #1a1b22;
     }
+}
+
+//animation
+.post-enter{
+    opacity: 0;
+}
+.post-enter-active{
+    opacity: 1;
+    transition: all 200ms ease-in;
+}
+.post-exit{
+    opacity: 1;
+}
+.post-exit-active{
+    opacity: 0;
+    transition: all 200ms ease-in;
 }

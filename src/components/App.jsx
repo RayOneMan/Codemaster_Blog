@@ -1,33 +1,24 @@
-import React, {useState} from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import About from "../pages/About";
 import Header from "./Header";
-import PostForm from "./PostForm";
-import Search from "./Search";
-import PostList from "./PostList";
-import Pagination from "./Pagination";
-
+import Posts from "../pages/Posts";
 import "./App.scss";
+import NotFound from "../pages/NotFound";
 
-export default function App() {
-    const [posts, setPosts] = useState ([
-        { id: 1, title: "Title 1", body: "Discription 1" },
-        { id: 2, title: "Title 2", body: "Discription 2" },
-        { id: 3, title: "Title 9", body: "Discription 9" },
-        { id: 4, title: "Title 10", body: "Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10Discription 10 " }
-    ]);
-    const createPost = (newPost) => {
-        setPosts([...posts, newPost]);
-    };
 
+
+const App = () => {
     return (
-        <div className="page">
+        <Router>
             <Header />
-            <div className="container">
-                <PostForm create={createPost}/>
-                <div className="line"></div>
-                <Search />
-                <PostList posts={posts} />
-                <Pagination />
-            </div>
-        </div>
+            <Routes>
+                <Route exact path="/about" element={<About />} />
+                <Route exact path="/posts" element={<Posts />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </Router>
     );
-}
+};
+
+export default App;

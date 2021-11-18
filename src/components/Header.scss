@@ -1,9 +1,12 @@
 @import "variables.scss";
 
 .header {
+  font-family: "Oswald", sans-serif;
+  // position: fixed;
+  // top: 0;
   box-sizing: border-box;
   width: 100%;
-  padding: 15px 15px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,15 +37,6 @@
     text-align: center;
     flex-wrap: wrap;
   }
-  &__item {
-    &:hover {
-      .translate__submenu,
-      .translate__submenu:hover {
-        visibility: visible;
-        color: $light-color;
-      }
-    }
-  }
 
   &__link {
     font-size: 24px;
@@ -58,6 +52,7 @@
       background: $light-color;
       color: $dark-color;
     }
+   
   }
 
   .header__menu {
@@ -83,21 +78,18 @@
     border-radius: 5px;
     position: absolute;
     margin-top: 55px;
-   
   }
+
 &__menu{
+  margin: 0 30px;
+  cursor: pointer;
   border-radius: 10px;
   background: $dark-color;
   color: $light-color;
   padding: 10px;
   text-transform: uppercase;
 }
-  &__item {
-    color: white;
-    background: $dark-color;
-  }
-
-
+ 
 } //исправить
 @media (max-width: 861px) {
   .header {

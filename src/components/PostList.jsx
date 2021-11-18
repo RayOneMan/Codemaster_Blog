@@ -2,18 +2,33 @@ import PostItem from "./PostItem";
 import { useTranslation } from "react-i18next";
 
 import "./PostList.scss";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-export default function PostList({ posts }) {
-    const renderPostItem = posts.map(item => {
-        return (<PostItem key={item.id} title={item.title} id={item.id} body={item.body} />);
-    });
-    const {t} = useTranslation();
+export default function PostList({ posts, remove }) {
+    const { t } = useTranslation();
 
+    if (!posts.length) {
+        return (
+            <h1 style={{textAlign: "center"}}>
+                Посты не найдены!
+            </h1>
+        );
+    }
     return (
         <div className="posts">
             <div className="posts__title">{t("POST_LIST")}</div>
             <div className="posts__list">
-                {renderPostItem}
+                <TransitionGroup>
+                    {posts.map((post, index) =>
+                        <CSSTransition
+                            key={post.id}
+                            timeout={500}
+                            classNames="post"
+                        >
+                            <PostItem remove={remove} title={post.title}  body={post.body} number={index + 1} post={post} />
+                        </CSSTransition>
+                    )}
+                </TransitionGroup>
             </div>
         </div>
     );
