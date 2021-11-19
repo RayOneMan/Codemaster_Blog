@@ -18,7 +18,6 @@ export default function PostForm({ create }) {
     return (
         <form className="create-new-post" action="">
             <div className="create-new-post__inputPost">
-                {/* <input type="file" name="picture" /> */}
                 <div className="create-new-post__list-inputs">
                     <input
                         value={post.title}

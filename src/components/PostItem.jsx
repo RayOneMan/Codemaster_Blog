@@ -1,16 +1,16 @@
 import "./PostItem.scss";
 import { useTranslation } from "react-i18next";
-import { useHistory} from "react-router";
+import { useNavigate} from "react-router";
 
 
-export default function PostItem({ number, body, title, remove, post }) {
+export default function PostItem({ id, body, title, remove, post }) {
     const { t } = useTranslation();
-    const router = useHistory();
+    const nav = useNavigate();
     return (
         <div className="post__item">
            
             <div className="post__content">
-                <div className="post__title">{number}. {title} </div>
+                <div className="post__title">{id}. {title} </div>
                 <div className="post__text">
                     {body}
                 </div>
@@ -18,7 +18,8 @@ export default function PostItem({ number, body, title, remove, post }) {
             <div className="post__list-btn">
                 <button
                     type="button" className="post__btn"
-                    onClick ={() => router.push(`/posts/${post.number}`)}>
+                    onClick ={() => nav(`/posts/${post.id}`)}
+                >
                     {t("OPEN")}
                 </button>
                 <button

@@ -25,7 +25,7 @@ export default function PostList({ posts, remove }) {
                             timeout={500}
                             classNames="post"
                         >
-                            <PostItem remove={remove} title={post.title}  body={post.body} number={index + 1} post={post} />
+                            <PostItem remove={remove} title={post.title}  body={post.body} id={index + 1} post={post} />
                         </CSSTransition>
                     )}
                 </TransitionGroup>
