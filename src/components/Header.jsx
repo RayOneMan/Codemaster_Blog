@@ -9,11 +9,11 @@ export default function Header() {
 
     return (
         <header className="header">
-            <a href="/#" className="header__logo">
+            <Link to="/posts" className="header__logo">
                 <div className="logo">
                     <span>{t("LOGO")}</span>
                 </div>
-            </a>
+            </Link>
             <ul className="header__list">
                 <li className="header__item">
 
