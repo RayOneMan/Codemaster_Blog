@@ -5,7 +5,6 @@ import PostList from "../components/PostList";
 import Spinner from "../components/Spinner";
 import PostService from "../API/PostService";
 
-
 import PostsFilter from "../components/PostFilter";
 import Modal from "../components/UI/Modal/Modal";
 import { useError } from "../hooks/useError";
@@ -28,7 +27,8 @@ export default function Posts() {
     }, [limit]);
 
     const onCreatePost = (newPost) => {
-        setPosts([...posts, newPost]);
+        setPosts([newPost, ...posts]);
+        posts.push(newPost);
         setIsVisibleAddPost(false);
     };
 
@@ -69,7 +69,6 @@ export default function Posts() {
                     remove={onRemovePost} />
                 {isPostsLoading &&
                     <Spinner />}
-           
             </div>
         </div>
     );
