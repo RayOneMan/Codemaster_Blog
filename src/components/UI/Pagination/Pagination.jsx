@@ -4,15 +4,15 @@ import { getPagesArray } from "../../../utils/pages";
 const Pagination = ({ totalPages, page, changePage }) => {
     let pagesArray = getPagesArray(totalPages);
     return (
-        <div className="pages__wrapper">
+        <div className="pagination">
             {pagesArray.map(p =>
-                <span
+                <button
                     onClick={() => changePage(p)}
                     key={p}
-                    className={page === p ? "pages pages__current" : "pages"}
+                    className={page === p ? "pagination__btn_active" : "pagination__btn"}
                 >
                     {p}
-                </span>
+                </button>
             )}
         </div>
     );

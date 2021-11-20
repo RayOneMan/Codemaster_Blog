@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { usePosts } from "../hooks/usePost";
+import {getPageCount} from "../utils/pages";
 import PostForm from "../components/PostForm";
 import PostList from "../components/PostList";
 import Spinner from "../components/Spinner";
@@ -8,23 +9,28 @@ import PostService from "../API/PostService";
 import PostsFilter from "../components/PostFilter";
 import Modal from "../components/UI/Modal/Modal";
 import { useError } from "../hooks/useError";
+import Pagination from "../components/UI/Pagination/Pagination";
 
 export default function Posts() {
     const [posts, setPosts] = useState([]);
-    const [limit] = useState(100);
     const [filter, setFilter] = useState({ sort: "", query: "" });
+    const [limit] = useState(10);
+    const [page, setPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(0);
     const [isVisibleAddPost, setIsVisibleAddPost] = useState(false);
     const [isVisibleSearch, setIsVisibleSearch] = useState(false);
     const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
 
-    const [getPosts, isPostsLoading, postError] = useError(async () => {
-        const response = await PostService.getAll(limit);
-        setPosts(response.data);
+    const [getPosts, isPostsLoading, postError] = useError(async (limit, page) => {
+        const response = await PostService.getAll(limit, page);
+        setPosts([...response.data]);
+        const totalCount = response.headers["x-total-count"];
+        setTotalPages(getPageCount(totalCount, limit));
     });
 
     useEffect(() => {
-        getPosts(limit);
-    }, [limit]);
+        getPosts(limit, page);
+    }, []);
 
     const onCreatePost = (newPost) => {
         setPosts([newPost, ...posts]);
@@ -34,6 +40,11 @@ export default function Posts() {
 
     const onRemovePost = (post) => {
         setPosts(posts.filter(p => p.id !== post.id));
+    };
+
+    const changePage = (page) => {
+        setPage(page);
+        getPosts(limit, page);
     };
 
     return (
@@ -64,11 +75,15 @@ export default function Posts() {
                 {postError &&
                     <h1>Error: ${postError}</h1>
                 }
+                {isPostsLoading &&
+                    <Spinner />}
+                    
                 <PostList
                     posts={sortedAndSearchedPosts}
                     remove={onRemovePost} />
-                {isPostsLoading &&
-                    <Spinner />}
+                <Pagination page={page}
+                    changePage={changePage}
+                    totalPages={totalPages}/>
             </div>
         </div>
     );

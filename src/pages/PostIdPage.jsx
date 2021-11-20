@@ -4,11 +4,13 @@ import PostService from "../API/PostService";
 import Spinner from "../components/Spinner";
 import PostId from "../components/PostId";
 import { useError } from "../hooks/useError";
+import { useTranslation } from "react-i18next";
 
 const PostIdPage = () => {
     const params = useParams();
     const [post, setPost] = useState({});
     const [comments, setComments] = useState([]);
+    const { t } = useTranslation();
 
     const [getPostById, isPostsLoading] = useError(async (id) => {
         const response = await PostService.getById(id);
@@ -28,12 +30,12 @@ const PostIdPage = () => {
     return (
         <div className="container">
             <div className="content">
-                <h1>Пост №: {params.id}</h1>
+                <h1>{t("POST_№")} {params.id}</h1>
                 {isPostsLoading
                     ? <Spinner />
                     : <PostId title={post.title}  body={post.body} id={post.id}/>
                 }
-                <h2> Коментарии: </h2>
+                <h2> {t("COMMENTS")} </h2>
                 {isCommentsLoading
                     ? <Spinner />
                     : <div>

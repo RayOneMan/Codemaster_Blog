@@ -18,7 +18,7 @@ export default function PostItem({ id, body, title, remove, post }) {
             <div className="post__list-btn">
                 <button
                     type="button" className="post__btn"
-                    onClick ={() => nav(`/posts/${post.id}`)}
+                    onClick ={() => nav(`/posts/${id}`)}
                 >
                     {t("OPEN")}
                 </button>

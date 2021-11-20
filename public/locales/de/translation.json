@@ -14,5 +14,10 @@
     "NUMBER_OF_POSTS_PER_PAGE": "Anzahl der Beiträge pro Seite",
     "POST_LIST": "Beitragsliste",
     "OPEN": "Offen",
-    "DELETE": "Löschen"
+    "DELETE": "Löschen",
+    "POST_№": "Beitrag Nr.",
+    "COMMENTS": "Kommentare",
+    "ABOUT_SITE": "Informationen zur Website",
+    "NOT_FOUND": "Seite nicht gefunden",
+    "COMEBACK_TO_MAIN_PAGE": "Zurück zur Hauptseite"
 }
