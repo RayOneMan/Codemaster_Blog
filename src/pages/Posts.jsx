@@ -72,15 +72,11 @@ export default function Posts() {
                     onClick={() => setIsVisibleSearch(true)}>
                     search
                 </button>
-                {postError &&
-                    <h1>Error: ${postError}</h1>
-                }
-                {isPostsLoading &&
-                    <Spinner />}
-                    
                 <PostList
                     posts={sortedAndSearchedPosts}
                     remove={onRemovePost} />
+                {postError && <h1>Error: ${postError} </h1>}
+                {isPostsLoading && <Spinner />}
                 <Pagination page={page}
                     changePage={changePage}
                     totalPages={totalPages}/>

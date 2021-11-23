@@ -2,8 +2,8 @@
 
 .header {
   font-family: "Oswald", sans-serif;
-  // position: fixed;
-  // top: 0;
+  position: fixed;
+  top: 0;
   box-sizing: border-box;
   width: 100%;
   padding: 5px;
@@ -11,6 +11,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: $dark-color;
+
+  &__burger-btn{
+    display: none;
+    color: white;
+    position: relative;
+  }
 
   &__logo {
     color: $light-color;
@@ -54,51 +60,17 @@
     }
    
   }
-
-  .header__menu {
-    color: $light-color;
-    font-size: 40px;
-    display: none;
-  }
 }
-
-.translate {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: $light-color;
-  position: relative;
-
-  &__submenu {
-    background: $dark-color;
-    visibility: hidden;
-    list-style: none;
-    text-align: center;
-    padding: 0 15px 20px 15px;
-    border-radius: 5px;
-    position: absolute;
-    margin-top: 55px;
-  }
-
-&__menu{
-  margin: 0 30px;
-  cursor: pointer;
-  border-radius: 10px;
-  background: $dark-color;
-  color: $light-color;
-  padding: 10px;
-  text-transform: uppercase;
-}
- 
-} //исправить
+//исправить
 @media (max-width: 861px) {
   .header {
     &__list {
-      display: none;
-    }
-
-    .header__menu {
+      display: none;}
+    &__burger-btn{
+      color: $light-color;
+      font-size: 40px;
+      cursor: pointer;
       display: block;
-    }
-  }
+      }
+}
 }

@@ -11,14 +11,14 @@ export default function PostsFilter({ filter, setFilter }) {
         <div className="search">
             <Input
                 value={filter.query}
-                onChange={e => setFilter({ ...filter, query: e.target.value })}
+                onChange={e => setFilter({ ...filter, query: e.target.value})}
                 className="search__input"
                 placeholder={t("SEARCH")}
             />
             <Select
                 className="search__select"
                 value={filter.query}
-                onChange={selectedSort => setFilter({ ...filter, sort: selectedSort })}
+                onChange={selectedSort => setFilter({ ...filter, sort: selectedSort})}
                 defaultValue={t("SORT")}
                 options={[
                     { value: "title", name: t("SORT_BY_TITLE") },
