@@ -6,12 +6,23 @@ import PostId from "../components/PostId";
 import { useError } from "../hooks/useError";
 import { useTranslation } from "react-i18next";
 
+/**
+ * В мобильном виде не вижу заголовка поста, шапка перекрывает
+ * на 404 странице есть возврат ко всем постам, а здесь его не хватает
+ * Комменты в идеале надо уметь создавать/удалять, пускай даже чужие тоже
+ */
 const PostIdPage = () => {
   const params = useParams();
   const [post, setPost] = useState({});
   const [comments, setComments] = useState([]);
   const { t } = useTranslation();
 
+  /**
+   * В идеале каждый упавший запрос должен быть выведен нотификацией
+   * И каждый успешный запрос на Create/Update/Delete тоже
+   *
+   * Назвать хук useError плохая идея, он служит для апи запроса всё же, а не для ошибки
+   */
   const [getPostById, isPostsLoading] = useError(async (id) => {
     const response = await PostService.getById(id);
     setPost(response.data);
@@ -35,6 +46,7 @@ const PostIdPage = () => {
           ? <Spinner />
           : <PostId title={post.title} body={post.body} id={post.id} />
         }
+        {/*отчего же комменты не сделаны отдельным компонентом?*/}
         <h2> {t("COMMENTS")} </h2>
         {isCommentsLoading
           ? <Spinner />
