@@ -21,7 +21,7 @@
         "max-len": "off",
         "indent": [
             "warn",
-            4
+            2
         ],
         "quotes": [
             "error",

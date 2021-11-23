@@ -7,50 +7,50 @@ import { useError } from "../hooks/useError";
 import { useTranslation } from "react-i18next";
 
 const PostIdPage = () => {
-    const params = useParams();
-    const [post, setPost] = useState({});
-    const [comments, setComments] = useState([]);
-    const { t } = useTranslation();
+  const params = useParams();
+  const [post, setPost] = useState({});
+  const [comments, setComments] = useState([]);
+  const { t } = useTranslation();
 
-    const [getPostById, isPostsLoading] = useError(async (id) => {
-        const response = await PostService.getById(id);
-        setPost(response.data);
-    });
+  const [getPostById, isPostsLoading] = useError(async (id) => {
+    const response = await PostService.getById(id);
+    setPost(response.data);
+  });
 
-    const [getComments, isCommentsLoading] = useError(async (id) => {
-        const response = await PostService.getCommentsByPostId(id);
-        setComments(response.data);
-    });
+  const [getComments, isCommentsLoading] = useError(async (id) => {
+    const response = await PostService.getCommentsByPostId(id);
+    setComments(response.data);
+  });
 
-    useEffect(() => {
-        getPostById(params.id);
-        getComments(params.id);
-    }, []);
+  useEffect(() => {
+    getPostById(params.id);
+    getComments(params.id);
+  }, []);
 
-    return (
-        <div className="container">
-            <div className="content">
-                <h1>{t("POST_№")} {params.id}</h1>
-                {isPostsLoading
-                    ? <Spinner />
-                    : <PostId title={post.title}  body={post.body} id={post.id}/>
-                }
-                <h2> {t("COMMENTS")} </h2>
-                {isCommentsLoading
-                    ? <Spinner />
-                    : <div>
-                        {comments.map(com =>
-                            <div key={com.id} className="content__item">
-                                <div className="com__name">{com.name}</div>
-                                <div className="com__email">{com.email}</div>
-                                <div className="com__body">{com.body}</div>
-                            </div>
-                        )}
-                    </div>
-                }
-            </div>
-        </div>
-    );
+  return (
+    <div className="container">
+      <div className="content">
+        <h1>{t("POST_№")} {params.id}</h1>
+        {isPostsLoading
+          ? <Spinner />
+          : <PostId title={post.title} body={post.body} id={post.id} />
+        }
+        <h2> {t("COMMENTS")} </h2>
+        {isCommentsLoading
+          ? <Spinner />
+          : <div>
+            {comments.map(com =>
+              <div key={com.id} className="content__item">
+                <div className="com__name">{com.name}</div>
+                <div className="com__email">{com.email}</div>
+                <div className="com__body">{com.body}</div>
+              </div>
+            )}
+          </div>
+        }
+      </div>
+    </div>
+  );
 
 };
 

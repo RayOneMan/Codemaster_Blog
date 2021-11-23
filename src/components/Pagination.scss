@@ -2,15 +2,15 @@
 @import "./UI/Button/Button.scss";
 
 .pagination {
-    font-size: 21px;
-    display: flex;
-    margin: 15px 0;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    &__btn {
-        @extend %btn;
-        margin: 5px;
-        padding: 10px 15px;
-    }
+  font-size: 21px;
+  display: flex;
+  margin: 15px 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  &__btn {
+    @extend %btn;
+    margin: 5px;
+    padding: 10px 15px;
+  }
 }

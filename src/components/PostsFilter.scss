@@ -3,18 +3,17 @@
 @import "./UI/Input/Input.scss";
 
 .search {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 10px;
-    &__select {
-        @extend %select;
-    }
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  &__select {
+    @extend %select;
+  }
 }
 
 .input {
-    @extend %input;
-    padding: 10px;
+  @extend %input;
+  padding: 10px;
 }
-

@@ -3,12 +3,12 @@
 @import "./UI/Input/Input.scss";
 
 .search {
-    &__input {
-        @extend %input;
-    }
+  &__input {
+    @extend %input;
+  }
 
-    &__select {
-        @extend %select;
-        margin-top: 10px;
-    }
+  &__select {
+    @extend %select;
+    margin-top: 10px;
+  }
 }

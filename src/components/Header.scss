@@ -12,7 +12,7 @@
   justify-content: space-between;
   background-color: $dark-color;
 
-  &__burger-btn{
+  &__burger-btn {
     display: none;
     color: white;
     position: relative;
@@ -58,19 +58,19 @@
       background: $light-color;
       color: $dark-color;
     }
-   
   }
 }
 //исправить
 @media (max-width: 861px) {
   .header {
     &__list {
-      display: none;}
-    &__burger-btn{
+      display: none;
+    }
+    &__burger-btn {
       color: $light-color;
       font-size: 40px;
       cursor: pointer;
       display: block;
-      }
-}
+    }
+  }
 }
