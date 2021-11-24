@@ -22,32 +22,40 @@ const PostIdPage = () => {
     setComments(response.data);
   });
 
+  const onRemoveCom = (com) => {
+    setComments(comments.filter(c => c.id !== com.id));
+    PostService.onRemoveCommentByPostId(com.id);
+  };
+
   useEffect(() => {
     getPostById(params.id);
     getComments(params.id);
   }, []);
 
   return (
-    <div className="container">
-      <div className="content">
-        <h1>{t("POST_№")} {params.id}</h1>
-        {isPostsLoading
-          ? <Spinner />
-          : <PostId title={post.title} body={post.body} id={post.id} />
-        }
-        <h2> {t("COMMENTS")} </h2>
-        {isCommentsLoading
-          ? <Spinner />
-          : <div>
-            {comments.map(com =>
-              <div key={com.id} className="content__item">
-                <div className="com__name">{com.name}</div>
-                <div className="com__email">{com.email}</div>
-                <div className="com__body">{com.body}</div>
-              </div>
-            )}
-          </div>
-        }
+    <div className="page">
+      <div className="container">
+        <div className="content">
+          <h1>{t("POST_№")} {params.id}</h1>
+          {isPostsLoading
+            ? <Spinner />
+            : <PostId title={post.title} body={post.body} id={post.id} />
+          }
+          <h2> {t("COMMENTS")} </h2>
+          {isCommentsLoading
+            ? <Spinner />
+            : <div>
+              {comments.map(com =>
+                <div key={com.id} className="content__item">
+                  <div className="com__name">{com.name}</div>
+                  <div className="com__email">{com.email}</div>
+                  <div className="com__body">{com.body}</div>
+                  <button className="post__btn" onClick={() => onRemoveCom(com)}> delete </button>
+                </div>
+              )}
+            </div>
+          }
+        </div>
       </div>
     </div>
   );

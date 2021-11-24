@@ -33,13 +33,15 @@ export default function Posts() {
   }, []);
 
   const onCreatePost = (newPost) => {
-    setPosts([newPost, ...posts]);
+    setPosts([...posts, newPost]);
     posts.push(newPost);
+    PostService.onCreateNewPost();
     setIsVisibleAddPost(false);
   };
 
   const onRemovePost = (post) => {
     setPosts(posts.filter(p => p.id !== post.id));
+    PostService.onRemovePostId(post.id);
   };
 
   const changePage = (page) => {
@@ -53,7 +55,7 @@ export default function Posts() {
         <Modal
           visible={isVisibleAddPost}
           setVisible={setIsVisibleAddPost}>
-          <PostForm create={onCreatePost} />
+          <PostForm create={onCreatePost}/>
         </Modal>
         <Modal
           visible={isVisibleSearch}
@@ -72,11 +74,8 @@ export default function Posts() {
           onClick={() => setIsVisibleSearch(true)}>
           search
         </button>
-        <PostList
-          posts={sortedAndSearchedPosts}
-          remove={onRemovePost} />
         {postError && <h1>Error: ${postError} </h1>}
-        {isPostsLoading && <Spinner />}
+        {isPostsLoading ? <Spinner /> : <PostList posts={sortedAndSearchedPosts} remove={onRemovePost} />}
         <Pagination page={page}
           changePage={changePage}
           totalPages={totalPages} />
