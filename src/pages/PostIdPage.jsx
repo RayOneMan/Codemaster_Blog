@@ -3,11 +3,10 @@ import { useParams } from "react-router";
 import PostService from "../API/PostService";
 import Spinner from "../components/Spinner";
 import PostId from "../components/PostId";
-import { useError } from "../hooks/useError";
+import { useFetching } from "../hooks/useFetching";
 import { useTranslation } from "react-i18next";
 
 /**
- * В мобильном виде не вижу заголовка поста, шапка перекрывает
  * на 404 странице есть возврат ко всем постам, а здесь его не хватает
  * Комменты в идеале надо уметь создавать/удалять, пускай даже чужие тоже
  */
@@ -21,14 +20,13 @@ const PostIdPage = () => {
    * В идеале каждый упавший запрос должен быть выведен нотификацией
    * И каждый успешный запрос на Create/Update/Delete тоже
    *
-   * Назвать хук useError плохая идея, он служит для апи запроса всё же, а не для ошибки
    */
-  const [getPostById, isPostsLoading] = useError(async (id) => {
+  const [getPostById, isPostsLoading] = useFetching(async (id) => {
     const response = await PostService.getById(id);
     setPost(response.data);
   });
 
-  const [getComments, isCommentsLoading] = useError(async (id) => {
+  const [getComments, isCommentsLoading] = useFetching(async (id) => {
     const response = await PostService.getCommentsByPostId(id);
     setComments(response.data);
   });

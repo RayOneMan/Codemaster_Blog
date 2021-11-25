@@ -30,9 +30,9 @@ export default class PostService {
     return response;
   }
 
-  static async onCreateNewPost(title, body) {
+  static async onCreateNewPost(newPost) {
     const response = await axios.post("http://localhost:3000/posts/" ,
-      { title:title, body:body});
+      {title:newPost.title, body:newPost.body});
     return response;
   }
 

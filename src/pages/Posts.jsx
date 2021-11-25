@@ -8,7 +8,7 @@ import PostService from "../API/PostService";
 
 import PostsFilter from "../components/PostFilter";
 import Modal from "../components/UI/Modal/Modal";
-import { useError } from "../hooks/useError";
+import { useFetching } from "../hooks/useFetching";
 import Pagination from "../components/UI/Pagination/Pagination";
 
 export default function Posts() {
@@ -21,7 +21,7 @@ export default function Posts() {
   const [isVisibleSearch, setIsVisibleSearch] = useState(false);
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
 
-  const [getPosts, isPostsLoading, postError] = useError(async (limit, page) => {
+  const [getPosts, isPostsLoading, postError] = useFetching(async (limit, page) => {
     const response = await PostService.getAll(limit, page);
     setPosts([...response.data]);
     const totalCount = response.headers["x-total-count"];
@@ -32,12 +32,11 @@ export default function Posts() {
     getPosts(limit, page);
   }, []);
 
-  const onCreatePost = (newPost) => {
-    setPosts([...posts, newPost]);
-    posts.push(newPost);
-    PostService.onCreateNewPost();
+  const [onCreateNewPost] = useFetching(async (newPost) => {
+    await PostService.onCreateNewPost(newPost);
+    getPosts(limit, page);
     setIsVisibleAddPost(false);
-  };
+  });
 
   const onRemovePost = (post) => {
     setPosts(posts.filter(p => p.id !== post.id));
@@ -52,10 +51,11 @@ export default function Posts() {
   return (
     <div className="page">
       <div className="container">
+
         <Modal
           visible={isVisibleAddPost}
           setVisible={setIsVisibleAddPost}>
-          <PostForm create={onCreatePost}/>
+          <PostForm onCreateNewPost={onCreateNewPost} />
         </Modal>
         <Modal
           visible={isVisibleSearch}

@@ -12,8 +12,7 @@ export default function Header() {
   const [menuActive, setMenuActive] = useState(false);
   const items = [
     { link: "/posts", translate: "LIST_POSTS" },
-    { link: "/about", translate: "ABOUT" },
-    { link: "/error", translate: "NOT_FOUND" }
+    { link: "/about", translate: "ABOUT" }
   ];
   // Как правильно передать переведеный текст?
 

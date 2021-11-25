@@ -22,7 +22,7 @@ export default function PostsFilter({ filter, setFilter }) {
         defaultValue={t("SORT")}
         options={[
           { value: "title", name: t("SORT_BY_TITLE") },
-          { value: "title", name: t("SORT_BY_DISCRIPTION") }
+          { value: "body", name: t("SORT_BY_DISCRIPTION") }
         ]}
       />
       {/* <NumberOfPostPerPage /> */}

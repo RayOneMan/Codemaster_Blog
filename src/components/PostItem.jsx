@@ -1,6 +1,6 @@
 import "./PostItem.scss";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 
 export default function PostItem({ id, body, title, remove, post }) {

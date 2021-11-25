@@ -11,9 +11,7 @@ export default function Menu({ items, active, setActive }) {
       <div className="blur" />
       <div className="menu__content" onClick={(e) => e.stopPropagation()}>
         <ul>
-          <li className="menu__translate">
-            <Translate />
-          </li>
+
           {items.map((item) =>
             <li key={item.link}>
               <Link className="menu__items"
@@ -22,6 +20,9 @@ export default function Menu({ items, active, setActive }) {
               </Link>
             </li>
           )}
+          <li className="menu__translate">
+            <Translate />
+          </li>
         </ul>
       </div>
     </div>

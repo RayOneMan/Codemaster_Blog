@@ -2,10 +2,10 @@ import "./PostForm.scss";
 import { useTranslation } from "react-i18next";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import PostService from "../API/PostService";
 
-export default function PostForm() {
+export default function PostForm({onCreateNewPost}) {
   const { t } = useTranslation();
+
 
   return (
     <Formik
@@ -15,11 +15,11 @@ export default function PostForm() {
           .min(2, "Минимум 2 символа для заполнения")
           .required("Обязательное поле!"),
         body: Yup.string()
-          .min(2, "Минимум 10 символа для заполнения")
+          .min(10, "Минимум 10 символа для заполнения")
           .required("Обязательное поле!"),
       })}
-      onSubmit={(values, { setSubmitting }) => {
-        PostService.onCreateNewPost(values.title, values.body);
+      onSubmit={(newPost, { setSubmitting }) => {
+        onCreateNewPost(newPost);
         setSubmitting(false);
       }}
     >
