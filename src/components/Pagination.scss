@@ -1,6 +1,3 @@
-@import "variables.scss";
-@import "./UI/Button/Button.scss";
-
 .pagination {
   font-size: 21px;
   display: flex;
@@ -9,7 +6,6 @@
   align-items: center;
   flex-wrap: wrap;
   &__btn {
-    @extend %btn;
     margin: 5px;
     padding: 10px 15px;
   }

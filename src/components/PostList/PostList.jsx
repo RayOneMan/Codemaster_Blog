@@ -1,10 +1,10 @@
-import PostItem from "./PostItem";
+import PostItem from "../PostItem/PostItem";
 import { useTranslation } from "react-i18next";
-
-import "./PostList.scss";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-export default function PostList({ posts, remove }) {
+import "./PostList.scss";
+
+export default function PostList({ posts, remove, onEditPost }) {
   const { t } = useTranslation();
 
   return (
@@ -18,7 +18,7 @@ export default function PostList({ posts, remove }) {
               timeout={500}
               classNames="post"
             >
-              <PostItem remove={remove} title={post.title} body={post.body} id={post.id} post={post} />
+              <PostItem remove={remove} onEditPost={onEditPost} title={post.title} body={post.body} id={post.id} post={post} />
             </CSSTransition>
           )}
         </TransitionGroup>

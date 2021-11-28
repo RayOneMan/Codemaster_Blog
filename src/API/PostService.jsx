@@ -21,7 +21,7 @@ export default class PostService {
   }
 
   static async getById(id) {
-    const response = await axios.get("http://localhost:3000/posts/" + id);
+    const response = await axios.get(`http://localhost:3000/posts/${id}`);
     return response;
   }
 
@@ -36,9 +36,21 @@ export default class PostService {
     return response;
   }
 
+  static async onEditPost(editPost, id) {
+    const response = await axios.get(`http://localhost:3000/posts/${id}`,
+      {title:editPost.title, body:editPost.body});
+    return response;
+  }
+
 
   static async onRemovePostId(id) {
     const response = await axios.delete(`http://localhost:3000/posts/${id}`);
+    return response;
+  }
+
+  static async onCreateNewComment(newComment, postId) {
+    const response = await axios.post("http://localhost:3000/comments/" ,
+      {postId, name:newComment.name, email:newComment.email, body:newComment.body});
     return response;
   }
 

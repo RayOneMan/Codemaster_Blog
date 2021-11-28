@@ -1,0 +1,35 @@
+.post {
+  &__item {
+    background: #23242b;
+    color: var(--light-color);
+    display: block;
+    width: 100%;
+    display: flex;
+
+    border-radius: 30px;
+    margin: 25px 10px;
+    justify-content: space-between;
+    flex: 1 1 auto;
+  }
+
+  &__list-btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    padding: 15px 20px;
+    font-size: 20px;
+    text-align: start;
+    font-weight: 800;
+  }
+
+  &__content {
+    padding: 10px;
+  }
+
+  &__text {
+    padding: 15px 20px;
+    margin-top: 15px;
+  }
+}

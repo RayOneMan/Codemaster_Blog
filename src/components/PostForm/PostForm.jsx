@@ -1,11 +1,11 @@
-import "./PostForm.scss";
 import { useTranslation } from "react-i18next";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Button from "../UI/Button/Button";
+import "./PostForm.scss";
 
-export default function PostForm({onCreateNewPost}) {
+export default function PostForm({ onCreateNewPost }) {
   const { t } = useTranslation();
-
 
   return (
     <Formik
@@ -33,23 +33,33 @@ export default function PostForm({onCreateNewPost}) {
                 className="create-new-post__input"
                 placeholder={t("TITLE_POST")}
               />
-              <ErrorMessage component="div" className="error" name="title" />
+              <ErrorMessage
+                component="div"
+                className="error"
+                name="title" />
             </div>
             <div className="create-new-post__list-inputs">
               <Field
                 type="text"
                 name="body"
                 as="textarea"
+                rows="10"
                 className="create-new-post__input"
                 placeholder={t("POST_DESCRIPTION")}
               />
-              <ErrorMessage component="div" className="error" name="body" />
+              <ErrorMessage
+                component="div"
+                className="error"
+                name="body" />
             </div>
           </div>
           <div>
-            <button className="create-new-post__btn" type="submit" disabled={isSubmitting}>
+            <Button
+              className="create-new-post__btn"
+              type="submit"
+              disabled={isSubmitting}>
               {t("CREATE_NEW_POST")}
-            </button>
+            </Button>
           </div>
         </Form>
       )}

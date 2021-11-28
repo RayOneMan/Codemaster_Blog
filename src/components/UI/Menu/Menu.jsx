@@ -11,7 +11,6 @@ export default function Menu({ items, active, setActive }) {
       <div className="blur" />
       <div className="menu__content" onClick={(e) => e.stopPropagation()}>
         <ul>
-
           {items.map((item) =>
             <li key={item.link}>
               <Link className="menu__items"

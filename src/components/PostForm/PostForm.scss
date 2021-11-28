@@ -1,6 +1,4 @@
-@import "variables.scss";
-@import "./UI/Button/Button.scss";
-@import "./UI/Input/Input.scss";
+@import "../UI/Input/Input.scss";
 
 .create-new-post {
   margin-top: 15px;
@@ -13,12 +11,8 @@
 
   &__input {
     @extend %input;
+    max-height: 100%;
+    resize: none;
     padding: 15px;
-  }
-
-  &__btn {
-    @extend %btn;
-    margin: 5px 10px;
-    padding: 10px 15px;
   }
 }

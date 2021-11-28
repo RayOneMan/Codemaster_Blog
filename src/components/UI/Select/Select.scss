@@ -4,7 +4,7 @@
   border-radius: 5px;
 
   &:focus {
-    box-shadow: 0 0 10px $dark-color;
-    transition: $transition-duration;
+    box-shadow: 0 0 10px var(--dark-color);
+    transition: var(--transition-duration);
   }
 }

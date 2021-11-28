@@ -1,13 +1,13 @@
 @import "variables.scss";
 
 %input {
-  transition: $transition-duration;
+  transition: var(--transition-duration);
   border-radius: 10px;
   box-sizing: border-box;
   width: 100%;
 
   &:focus {
-    transition: $transition-duration;
-    background: $input-bg;
+    transition: var(--transition-duration);
+    background: var(--input-bg);
   }
 }

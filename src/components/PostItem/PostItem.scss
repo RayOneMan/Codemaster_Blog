@@ -1,0 +1,8 @@
+@media (max-width: 580px) {
+  .post {
+    &__item {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

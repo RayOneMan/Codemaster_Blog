@@ -1,7 +1,12 @@
-export default function Button() {
+import React from "react";
+import cl from "./Button.module.css";
+
+const Button = ({ children, ...props }) => {
   return (
-    <button className="post__btn"></button>
+    <button {...props} className={cl.btn}>
+      {children}
+    </button>
   );
-}
+};
 
-
+export default Button;

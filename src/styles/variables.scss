@@ -1,32 +1,10 @@
-/**
-  В целом идея понятная, ты собрал все переменные в один файл, но есть способ лучше, надо было использовать css variables
-  например тебе надо сделать кнопку
-  .button {
-    background: var(--button-bg-color, #000);
-    color: var(--button-color, #fff);
-  }
-  соответственно если тебе надо переопределить цвета кнопки далее ты добавляешь в сборку файлик overrides.scss и там пишешь
-  :root {
-    --button-bg-color: blue;
-    --button-color: red;
-  }
-  этот способ лучше, т.к. не требует собирать все цвета воедино, если есть общие цвета сайта, то добавится ещё файлик variables.scss
-  как у тебя, но там не будет scss переменных, будут тоже css variables
-  :root {
-    --primary-color: green;
-    --container-bg-color: #f90
-  }
-
-  также раз у тебя есть цветовая схема через css переменные саму кнопку можно уже описать например так
-  .button {
-    background: var(--button-bg-color, var(--container-bg-color));
-    color: var(--button-color, var(--inverse-color));
-  }
- */
-
-$dark-color: #000000;
-$dark-color2: #1a1b22;
-$bg-color: #f5f5f5;
-$input-bg: #e1e1e1;
-$light-color: #fff;
-$transition-duration: 0.5s;
+:root {
+  --btn-color: 0, 0, 0;
+  --dark-color: #000000;
+  --dark-color2: #1a1b22;
+  --bg-color: #f5f5f5;
+  --input-bg: #e1e1e1;
+  --light-color: #fff;
+  --transition-duration: 0.5s;
+  --font:"Oswald", sans-serif;
+}

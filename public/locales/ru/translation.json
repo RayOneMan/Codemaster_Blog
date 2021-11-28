@@ -19,5 +19,9 @@
   "COMMENTS": "Комментарии",
   "ABOUT_SITE": "Информация о сайте",
   "NOT_FOUND": "Страница не найдена",
-  "COMEBACK_TO_MAIN_PAGE": "Вернуться на главную страницу"
+  "COMEBACK_TO_MAIN_PAGE": "Вернуться на главную страницу",
+  "COMMENT_NAME": "Имя: ",
+  "COMMENT_EMAIL":"Email: ",
+  "COMMENT_BODY": "Комментарий",
+  "CREATE_NEW_COMMENT": "Прокомментировать"
 }

@@ -19,5 +19,9 @@
   "COMMENTS": "Comments",
   "ABOUT_SITE": "Information about the site",
   "NOT_FOUND": "Page not found",
-  "COMEBACK_TO_MAIN_PAGE": "Go back to the main page"
+  "COMEBACK_TO_MAIN_PAGE": "Go back to the main page",
+  "COMMENT_NAME": "Name: ",
+  "COMMENT_EMAIL":"Email: ",
+  "COMMENT_BODY": "Сomment",
+  "CREATE_NEW_COMMENT": "Comment on"
 }

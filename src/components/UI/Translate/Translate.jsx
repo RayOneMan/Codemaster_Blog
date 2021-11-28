@@ -7,7 +7,7 @@ export default function Translate() {
   return (
     <div>
       <select className="translate__menu" value={i18n.language} onChange={(e) => i18n.changeLanguage(e.target.value)}>
-        <option className="translate__menu_item" value="en">English</option>         {/* Какая то хрень */}
+        <option className="translate__menu_item" value="en">English</option>
         <option className="translate__menu_item" value="ru">Russian</option>
         <option className="translate__menu_item" value="de">Deutsch</option>
       </select>

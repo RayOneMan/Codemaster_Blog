@@ -1,11 +1,11 @@
-import "./Header.scss";
 import { useTranslation } from "react-i18next";
-
-import "./UI/Select/Select.scss";
 import { Link } from "react-router-dom";
-import Menu from "./UI/Menu/Menu";
 import { useState } from "react";
-import Translate from "./UI/Translate/Translate";
+import Menu from "../UI/Menu/Menu";
+import Translate from "../UI/Translate/Translate";
+
+import "./Header.scss";
+
 
 export default function Header() {
   const { t } = useTranslation();
@@ -14,7 +14,6 @@ export default function Header() {
     { link: "/posts", translate: "LIST_POSTS" },
     { link: "/about", translate: "ABOUT" }
   ];
-  // Как правильно передать переведеный текст?
 
   return (
     <header className="header">

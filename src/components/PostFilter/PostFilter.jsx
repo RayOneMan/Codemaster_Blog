@@ -1,6 +1,5 @@
-// import NumberOfPostPerPage from "./NumberOfPostPerPage";
-import Input from "./UI/Input/Input";
-import Select from "./UI/Select/Select";
+import Input from "../UI/Input/Input";
+import Select from "../UI/Select/Select";
 import { useTranslation } from "react-i18next";
 
 import "./PostsFilter.scss";
@@ -25,7 +24,6 @@ export default function PostsFilter({ filter, setFilter }) {
           { value: "body", name: t("SORT_BY_DISCRIPTION") }
         ]}
       />
-      {/* <NumberOfPostPerPage /> */}
     </div>
   );
 }

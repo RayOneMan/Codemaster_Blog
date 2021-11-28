@@ -1,5 +1,13 @@
-export default function Input() {
+import React from "react";
+import cl from "./Input.module.css";
+
+const Input = (props) => {
   return (
-    <input className="input" />
+    <input
+      {...props}
+      className={cl.Input}
+    />
   );
-}
+};
+
+export default Input;

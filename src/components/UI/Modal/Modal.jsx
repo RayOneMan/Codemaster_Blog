@@ -1,10 +1,10 @@
 import React from "react";
-import "./Modal.scss";
+import cl from "./Modal.module.css";
 
 const Modal = ({ children, visible, setVisible }) => {
   return (
-    visible && (<div className="Modal" onClick={() => setVisible(false)}>
-      <div className="Modal__Content" onClick={(e) => e.stopPropagation()}>
+    visible && (<div className={cl.Modal} onClick={() => setVisible(false)}>
+      <div className={cl.Modal__Content} onClick={(e) => e.stopPropagation()}>
         {children}
       </div>
     </div>)

@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { usePosts } from "../hooks/usePost";
-import { getPageCount } from "../utils/pages";
-import PostForm from "../components/PostForm";
-import PostList from "../components/PostList";
-import Spinner from "../components/Spinner";
-import PostService from "../API/PostService";
+import { usePosts } from "../../hooks/usePost";
+import { getPageCount } from "../../utils/pages";
+import { useFetching } from "../../hooks/useFetching";
 
-import PostsFilter from "../components/PostFilter";
-import Modal from "../components/UI/Modal/Modal";
-import { useFetching } from "../hooks/useFetching";
-import Pagination from "../components/UI/Pagination/Pagination";
+import PostForm from "../../components/PostForm/PostForm";
+import Spinner from "../../components/Spinner";
+import PostService from "../../API/PostService";
+import PostsFilter from "../../components/PostFilter/PostFilter";
+import Modal from "../../components/UI/Modal/Modal";
+import Pagination from "../../components/UI/Pagination/Pagination";
+import PostEdit from "../../components/PostEdit/PostEdit";
+import PostList from "../../components/PostList/PostList";
+
+import "./Posts.scss";
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
@@ -19,6 +22,7 @@ export default function Posts() {
   const [totalPages, setTotalPages] = useState(0);
   const [isVisibleAddPost, setIsVisibleAddPost] = useState(false);
   const [isVisibleSearch, setIsVisibleSearch] = useState(false);
+  const [isVisibleEdit, setIsVisibleEdit] = useState(false);
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
 
   const [getPosts, isPostsLoading, postError] = useFetching(async (limit, page) => {
@@ -38,6 +42,12 @@ export default function Posts() {
     setIsVisibleAddPost(false);
   });
 
+  const onEditPost = (id, editPost) => {
+    PostService.onEditPost(id, editPost);
+    getPosts(limit, page);
+    setIsVisibleEdit  (false);
+  };
+
   const onRemovePost = (post) => {
     setPosts(posts.filter(p => p.id !== post.id));
     PostService.onRemovePostId(post.id);
@@ -51,7 +61,6 @@ export default function Posts() {
   return (
     <div className="page">
       <div className="container">
-
         <Modal
           visible={isVisibleAddPost}
           setVisible={setIsVisibleAddPost}>
@@ -61,6 +70,15 @@ export default function Posts() {
           visible={isVisibleSearch}
           setVisible={setIsVisibleSearch}>
           <PostsFilter
+            filter={filter}
+            setFilter={setFilter} />
+        </Modal>
+
+
+        <Modal
+          visible={isVisibleEdit}
+          setVisible={setIsVisibleEdit}>
+          <PostEdit
             filter={filter}
             setFilter={setFilter} />
         </Modal>
@@ -75,10 +93,24 @@ export default function Posts() {
           search
         </button>
         {postError && <h1>Error: ${postError} </h1>}
-        {isPostsLoading ? <Spinner /> : <PostList posts={sortedAndSearchedPosts} remove={onRemovePost} />}
+        {isPostsLoading ? <Spinner /> : <PostList posts={sortedAndSearchedPosts} remove={onRemovePost} onEditPost={onEditPost} />}
         <Pagination page={page}
           changePage={changePage}
           totalPages={totalPages} />
+      </div>
+      <div className="footer">
+        <div>
+          <button
+            className="material-icons footer__add-btn"
+            onClick={() => setIsVisibleSearch(true)}>
+            search
+          </button>
+        </div>
+        <div> <button
+          className="material-icons footer__search-btn"
+          onClick={() => setIsVisibleAddPost(true)}>
+          add
+        </button></div>
       </div>
     </div>
   );

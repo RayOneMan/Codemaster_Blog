@@ -1,5 +1,4 @@
-import "./PostItem.scss";
-
+import "./PostId.scss";
 
 export default function PostItem({ id, body, title }) {
   return (
