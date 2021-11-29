@@ -14,6 +14,9 @@ import PostList from "../../components/PostList/PostList";
 
 import "./Posts.scss";
 
+// этот компонент получился излишне большим, делает много всего сразу
+// Присмотрись внимательно какие компоненты можно извлечь как дочерние, чтобы уменьшить кол-во кода в этом компоненте
+// Сейчас его сложно тестировать
 export default function Posts() {
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({ sort: "", query: "" });
@@ -28,7 +31,7 @@ export default function Posts() {
   const [getPosts, isPostsLoading, postError] = useFetching(async (limit, page) => {
     const response = await PostService.getAll(limit, page);
     setPosts([...response.data]);
-    const totalCount = response.headers["x-total-count"];
+    const totalCount = response.headers["x-total-count"]; // ого, здесь молодец, нашёл решение :) правда в нормальном апи total вернётся как отдельное поле
     setTotalPages(getPageCount(totalCount, limit));
   });
 
@@ -38,14 +41,14 @@ export default function Posts() {
 
   const [onCreateNewPost] = useFetching(async (newPost) => {
     await PostService.onCreateNewPost(newPost);
-    getPosts(limit, page);
+    getPosts(limit, page); // это лишнее, после создания / редактирования элемента не нужны доп запросы на сервер, их можно вставить в уже существующий набор постов
     setIsVisibleAddPost(false);
   });
 
   const onEditPost = (id, editPost) => {
     PostService.onEditPost(id, editPost);
     getPosts(limit, page);
-    setIsVisibleEdit  (false);
+    setIsVisibleEdit(false);
   };
 
   const onRemovePost = (post) => {
