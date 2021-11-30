@@ -18,6 +18,10 @@ export default function PostItem({ id, body, title, remove, onEditPost, post }) 
       <Modal
         visible={isVisibleEdit}
         setVisible={setIsVisibleEdit}>
+
+        {/*onEditPost и подобные не надоело пробрасывать между компонентами вверх/вниз по дереву?*/}
+        {/*для этого как раз и создан redux/mobx, советую второй, с ним проще*/}
+
         <PostEdit onEditPost={onEditPost} postBody={post.body} postTitle={post.title}/>
       </Modal>
       <div className="post__item">
@@ -28,6 +32,7 @@ export default function PostItem({ id, body, title, remove, onEditPost, post }) 
           </div>
         </div>
         <div className="post__list-btn">
+          {/*это ссылка, а не кнопка, как и другие места где ты делаешь навигацию*/}
           <Button
             type="button"
             onClick={() => nav(`/posts/${id}`)}
@@ -39,11 +44,11 @@ export default function PostItem({ id, body, title, remove, onEditPost, post }) 
             onClick={() => remove(post)}>
             {t("DELETE")}
           </Button>
-          {/* <Button
+          <Button
             type="button"
             onClick={() => setIsVisibleEdit(true)}>
             Изменить
-          </Button> */}
+          </Button>
         </div>
       </div>
     </>
