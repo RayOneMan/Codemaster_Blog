@@ -4,7 +4,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Button from "../UI/Button/Button";
 
-
+// PostForm и PostEdit Это один компонент, в точности как я показывал на занятиях
+// initialValues то что тебе нужно, onChange не нужно
+// https://formik.org/docs/api/field#example
 export default function PostEdit({ onEditPost, postBody, postTitle }) {
   const { t } = useTranslation();
 

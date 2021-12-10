@@ -4,11 +4,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Personal project - "Blog"
-## Available Scripts
 
 ## What is the app?
-In the project directory, you can run:
-
 This application was created for educational purposes.
 ### `npm start`
 
@@ -20,6 +17,10 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### Launch of the project
+```
+json-server --watch db.json
+```
+
 ```
 npm run start
 ```
@@ -59,3 +60,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 -   Sass
 -   React
 -   React router
+-   React-transition-group
+-   i18next
+-   JSON-server
+-   axios
+-   formik
+-   yup
+-   formik
