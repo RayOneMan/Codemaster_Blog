@@ -45,19 +45,11 @@ export default function Posts() {
     setIsVisibleAddPost(false);
   });
 
-<<<<<<< HEAD
   // const onEditPost = (id, editPost) => {
   //   PostService.onEditPost(id, editPost);
   //   getPosts(limit, page);
   //   // setIsVisibleEdit  (false);
   // };
-=======
-  const onEditPost = (id, editPost) => {
-    PostService.onEditPost(id, editPost);
-    getPosts(limit, page);
-    setIsVisibleEdit(false);
-  };
->>>>>>> c8f3af9a0a37ca2e47747d0dfa36ea9f2b2e8182
 
   const onRemovePost = (post) => {
     if (window.confirm(`${t("DELETE_POST")} №${post.id}?`)) {
