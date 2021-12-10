@@ -23,5 +23,7 @@
   "COMMENT_NAME": "Name: ",
   "COMMENT_EMAIL":"Email: ",
   "COMMENT_BODY": "Ein Kommentar",
-  "CREATE_NEW_COMMENT": "Kommentieren"
+  "CREATE_NEW_COMMENT": "Kommentieren",
+  "DELETE_COMMENT": "Kommentar löschen",
+  "DELETE_POST": "Beitrag entfernen"
 }

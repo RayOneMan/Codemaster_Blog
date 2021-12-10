@@ -12,20 +12,18 @@ import Comments from "../../components/Comments/Comments";
 
 import "./PostIdPage.scss";
 
-
-
 const PostIdPage = () => {
   const params = useParams();
   const [post, setPost] = useState({});
   const [comments, setComments] = useState([]);
   const { t } = useTranslation();
 
-  const [getPostById, isPostsLoading] = useFetching(async (id) => {
+  const [getPostById, isPostLoading, postError] = useFetching(async (id) => {
     const response = await PostService.getById(id);
     setPost(response.data);
   });
 
-  const [getComments, isCommentsLoading] = useFetching(async (id) => {
+  const [getComments, isCommentsLoading, commentsError] = useFetching(async (id) => {
     const response = await PostService.getCommentsByPostId(id);
     setComments(response.data);
   });
@@ -37,8 +35,10 @@ const PostIdPage = () => {
   });
 
   const onRemoveCom = (Comment) => {
-    setComments(comments.filter(c => c.id !== Comment.id));
-    PostService.onRemoveCommentByPostId(Comment.id);
+    if (window.confirm(`${t("DELETE_POST")} №${Comment.id}?`)) {
+      setComments(comments.filter(c => c.id !== Comment.id));
+      PostService.onRemoveCommentByPostId(Comment.id);
+    }
   };
 
   useEffect(() => {
@@ -51,16 +51,12 @@ const PostIdPage = () => {
       <div className="container">
         <div className="post-id-page">
           <div className="post-id-page__title">{t("POST_№")} {params.id}</div>
-          {isPostsLoading
-            ? <Spinner />
-            : <PostId title={post.title} body={post.body} id={post.id} />
-          }
+          {postError && <h2>Error: ${postError} </h2>}
+          {isPostLoading ? <Spinner /> : <PostId title={post.title} body={post.body} id={post.id} />}
           <Link to="/posts" className="comeback__btn"> {t("COMEBACK_TO_MAIN_PAGE")}</Link>
           <h2> {t("COMMENTS")} </h2>
-          {isCommentsLoading
-            ? <Spinner />
-            : <Comments comments={comments} onRemoveCom={onRemoveCom}/>
-          }
+          {commentsError && <h2>Error: ${commentsError} </h2>}
+          {isCommentsLoading ? <Spinner /> : <Comments comments={comments} onRemoveCom={onRemoveCom} />}
           <CommentForm onCreateNewComment={onCreateNewComment}></CommentForm>
         </div>
       </div>

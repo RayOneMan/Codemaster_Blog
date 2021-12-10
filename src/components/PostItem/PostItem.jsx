@@ -1,25 +1,17 @@
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { Link} from "react-router-dom";
 
 import Button from "../UI/Button/Button";
-import Modal from "../UI/Modal/Modal";
-import PostEdit from "../PostEdit/PostEdit";
+
 
 import "./PostItem.scss";
 
-export default function PostItem({ id, body, title, remove, onEditPost, post }) {
+export default function PostItem({ id, body, title, remove, post }) {
   const { t } = useTranslation();
-  const nav = useNavigate();
-  const [isVisibleEdit, setIsVisibleEdit] = useState(false);
+
 
   return (
     <>
-      <Modal
-        visible={isVisibleEdit}
-        setVisible={setIsVisibleEdit}>
-        <PostEdit onEditPost={onEditPost} postBody={post.body} postTitle={post.title}/>
-      </Modal>
       <div className="post__item">
         <div className="post__content">
           <div className="post__title">{id}. {title} </div>
@@ -28,22 +20,17 @@ export default function PostItem({ id, body, title, remove, onEditPost, post }) 
           </div>
         </div>
         <div className="post__list-btn">
-          <Button
-            type="button"
-            onClick={() => nav(`/posts/${id}`)}
+          <Link
+            to={`/posts/${id}`}
+            className="post__link-open"
           >
             {t("OPEN")}
-          </Button>
+          </Link>
           <Button
             type="button"
             onClick={() => remove(post)}>
             {t("DELETE")}
           </Button>
-          {/* <Button
-            type="button"
-            onClick={() => setIsVisibleEdit(true)}>
-            Изменить
-          </Button> */}
         </div>
       </div>
     </>

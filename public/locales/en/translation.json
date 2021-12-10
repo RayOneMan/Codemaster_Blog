@@ -23,5 +23,7 @@
   "COMMENT_NAME": "Name: ",
   "COMMENT_EMAIL":"Email: ",
   "COMMENT_BODY": "Сomment",
-  "CREATE_NEW_COMMENT": "Comment on"
+  "CREATE_NEW_COMMENT": "Comment on",
+  "DELETE_COMMENT": "Delete comment",
+  "DELETE_POST": "Delete post"
 }

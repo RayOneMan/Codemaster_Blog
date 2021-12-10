@@ -23,5 +23,7 @@
   "COMMENT_NAME": "Имя: ",
   "COMMENT_EMAIL":"Email: ",
   "COMMENT_BODY": "Комментарий",
-  "CREATE_NEW_COMMENT": "Прокомментировать"
+  "CREATE_NEW_COMMENT": "Прокомментировать",
+  "DELETE_COMMENT": "Удалить комментарий",
+  "DELETE_POST": "Удалить пост"
 }

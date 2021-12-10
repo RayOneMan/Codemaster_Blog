@@ -8,7 +8,6 @@ import PostIdPage from "../pages/PostIdPage/PostIdPage";
 
 import "./App.scss";
 
-
 const App = () => {
   return (
     <BrowserRouter>

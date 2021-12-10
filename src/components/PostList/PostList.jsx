@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import "./PostList.scss";
 
-export default function PostList({ posts, remove, onEditPost }) {
+export default function PostList({ posts, remove }) {
   const { t } = useTranslation();
 
   return (
@@ -18,10 +18,11 @@ export default function PostList({ posts, remove, onEditPost }) {
               timeout={500}
               classNames="post"
             >
-              <PostItem remove={remove} onEditPost={onEditPost} title={post.title} body={post.body} id={post.id} post={post} />
+              <PostItem remove={remove} title={post.title} body={post.body} id={post.id} post={post} />
             </CSSTransition>
           )}
         </TransitionGroup>
+
       </div>
     </div>
   );
