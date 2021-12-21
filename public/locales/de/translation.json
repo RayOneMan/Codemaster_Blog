@@ -6,7 +6,6 @@
   "LANG": "Sprache",
   "TITLE_POST": "Titelbeitrag",
   "POST_DESCRIPTION": "Beschreibung des Beitrags",
-  "CREATE_NEW_POST": "Neuen Beitrag erstellen",
   "SEARCH": "Suche",
   "SORT": "Sortierung",
   "SORT_BY_TITLE": "Sortierung nach Titel",
@@ -19,11 +18,16 @@
   "COMMENTS": "Kommentare",
   "ABOUT_SITE": "Informationen zur Website",
   "NOT_FOUND": "Seite nicht gefunden",
-  "COMEBACK_TO_MAIN_PAGE": "Zurück zur Hauptseite",
+  "COMEBACK_TO_MAIN": "Zurück zur Startseite",
+  "COMEBACK": "Zurückkehren",
   "COMMENT_NAME": "Name: ",
   "COMMENT_EMAIL":"Email: ",
   "COMMENT_BODY": "Ein Kommentar",
   "CREATE_NEW_COMMENT": "Kommentieren",
   "DELETE_COMMENT": "Kommentar löschen",
-  "DELETE_POST": "Beitrag entfernen"
+  "CREATE_NEW_POST": "Neuen Beitrag erstellen",
+  "EDIT_POST": "Edit post №: ",
+  "DELETE_POST": "Beitrag entfernen",
+  "EDIT_POST_BTN": "Beitrag bearbeiten",
+  "CREATE_POST_BTN": "Beitrag erstellen"
 }

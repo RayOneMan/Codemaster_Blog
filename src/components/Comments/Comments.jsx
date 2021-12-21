@@ -1,10 +1,9 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
-export default function Comments({comments, onRemoveCom}) {
+export default function Comments({ comments, onRemoveCom }) {
   const { t } = useTranslation();
-  return (
 
+  return (
     <div className="comments">
       {comments.map(Comment =>
         <div key={Comment.id} className="post-id-page__comments">

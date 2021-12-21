@@ -1,10 +1,14 @@
-import React from "react";
 import { getPagesArray } from "../../../utils/pages";
 
 import "./Pagination.scss";
 
-const Pagination = ({ totalPages, page, changePage }) => {
+const Pagination = ({ totalPages, page, setPage }) => {
   let pagesArray = getPagesArray(totalPages);
+
+  const changePage = (page) => {
+    setPage(page);
+  };
+
   return (
     <div className="pagination">
       {pagesArray.map(p =>

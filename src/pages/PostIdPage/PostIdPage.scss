@@ -9,13 +9,11 @@
     padding: 10px;
     border-radius: 10px;
     margin: 10px 0;
-    font-size: 20px;
+    font-size: 14px;
   }
 }
+
 .delet__btn {
-  position: absolute;
-  top: 10%;
-  right: 20px;
   font-size: 16px;
   padding: 5px;
   color: var(--dark-color);
@@ -31,7 +29,9 @@
 }
 
 .post-id-page {
+  position: relative;
   display: flex;
+  gap: 30px;
   flex-direction: column;
   align-items: center;
   margin: 20px;
@@ -60,5 +60,39 @@
     justify-content: space-between;
     flex: 1 1 auto;
     flex-direction: column;
+  }
+}
+.comeback__btn {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--dark-color2);
+  color: var(--light-color);
+  font-size: 14px;
+  text-decoration: none;
+  transition: var(--transition-duration);
+  padding: 10px;
+  border-radius: 20px 0px 0px 0px;
+  &:hover {
+    background: var(--light-color);
+    color: var(--dark-color);
+  }
+}
+
+.comeback-btn-text {
+  font-family: var(--font);
+}
+
+@media (min-width: 601px) {
+  .delet__btn {
+    position: absolute;
+    top: 10%;
+    right: 20px;
+  }
+}
+@media (max-width: 501px) {
+  .comeback-btn-text {
+    display: none;
   }
 }

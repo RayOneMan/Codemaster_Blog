@@ -6,7 +6,6 @@
   "LANG": "Язык",
   "TITLE_POST": "Заголовок поста",
   "POST_DESCRIPTION": "Описание поста",
-  "CREATE_NEW_POST": "Создать новый пост",
   "SEARCH": "Поиск",
   "SORT": "Сортировать",
   "SORT_BY_TITLE": "Сортировать по названию",
@@ -19,11 +18,16 @@
   "COMMENTS": "Комментарии",
   "ABOUT_SITE": "Информация о сайте",
   "NOT_FOUND": "Страница не найдена",
-  "COMEBACK_TO_MAIN_PAGE": "Вернуться на главную страницу",
+  "COMEBACK_TO_MAIN": "Вернуться на главную страницу",
+  "COMEBACK": "Вернуться",
   "COMMENT_NAME": "Имя: ",
   "COMMENT_EMAIL":"Email: ",
   "COMMENT_BODY": "Комментарий",
   "CREATE_NEW_COMMENT": "Прокомментировать",
   "DELETE_COMMENT": "Удалить комментарий",
-  "DELETE_POST": "Удалить пост"
+  "CREATE_NEW_POST": "Создать новый пост",
+  "EDIT_POST": "Редактировать пост №: ",
+  "DELETE_POST": "Удалить пост",
+  "EDIT_POST_BTN": "Редактировать пост",
+  "CREATE_POST_BTN": "Создать пост"
 }

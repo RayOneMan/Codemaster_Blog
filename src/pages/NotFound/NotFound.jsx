@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -12,7 +11,7 @@ export default function NotFound() {
         <div className="not-found-page">
           <div className="not-found-page__title">Error 404: </div>
           <div className="not-found-page__item"> {t("NOT_FOUND")}</div>
-          <Link to="/posts" className="comeback__btn"> {t("COMEBACK_TO_MAIN_PAGE")}</Link>
+          <Link to="/posts" className="comeback-to-main-page__btn"><div className="comeback-btn-text"> {t("COMEBACK_TO_MAIN")} </div></Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,4 @@
-.add_btn {
-  position: fixed;
-  bottom: 10%;
-  right: 2%;
+.scroll {
   width: 50px;
   height: 50px;
   color: var(--light-color);
@@ -15,16 +12,7 @@
     transform: scale(1.15);
     transition: all 0.3s ease-in;
   }
-}
-
-.scroll {
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-}
-
-@media (max-width: 861px) {
-  .add_btn {
-    display: none;
+  &.visible {
+    background-color: aqua;
   }
 }

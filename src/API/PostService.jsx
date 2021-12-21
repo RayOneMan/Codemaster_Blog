@@ -1,8 +1,5 @@
 import axios from "axios";
 
-/**
- * Редактирования нет
- */
 export default class PostService {
   static async getAll(limit, page) {
     const response = await axios.get("http://localhost:3000/posts", {
@@ -14,7 +11,7 @@ export default class PostService {
     return response;
   }
 
-  static async getById(id) {
+  static async getPostById(id) {
     const response = await axios.get(`http://localhost:3000/posts/${id}`);
     return response;
   }
@@ -30,11 +27,11 @@ export default class PostService {
     return response;
   }
 
-  // static async onEditPost(editPost, id) {
-  //   const response = await axios.get(`http://localhost:3000/posts/${id}`,
-  //     {title:editPost.title, body:editPost.body});
-  //   return response;
-  // }
+  static async onEditPost(id, post) {
+    const response = await axios.put(`http://localhost:3000/posts/${id}`,
+      {title: post.title, body: post.body});
+    return response;
+  }
 
   static async onRemovePostId(id) {
     const response = await axios.delete(`http://localhost:3000/posts/${id}`);

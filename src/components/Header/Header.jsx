@@ -1,14 +1,15 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+
 import Menu from "../UI/Menu/Menu";
-import Translate from "../UI/Translate/Translate";
+import LanguageSelector from "../UI/LanguageSelector/LanguageSelector";
 
 import "./Header.scss";
 
-
 export default function Header() {
   const { t } = useTranslation();
+
   const [menuActive, setMenuActive] = useState(false);
   const items = [
     { link: "/posts", translate: "LIST_POSTS" },
@@ -24,7 +25,7 @@ export default function Header() {
       </Link>
       <ul className="header__list">
         <li className="header__item">
-          <Translate />
+          <LanguageSelector />
         </li>
         <li className="header__item">
           <Link to="/posts" className="header__link">{t("LIST_POSTS")}</Link>
@@ -35,8 +36,7 @@ export default function Header() {
       </ul>
       <div
         className="header__burger-btn material-icons"
-        onClick={() => setMenuActive(!menuActive)}
-      >
+        onClick={() => setMenuActive(!menuActive)}>
         menu
         <Menu
           active={menuActive}

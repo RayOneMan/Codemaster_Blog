@@ -1,4 +1,3 @@
-import React from "react";
 import cl from "./Select.scss";
 
 const Select = ({ options, defaultValue, value, onChange }) => {

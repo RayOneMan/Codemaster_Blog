@@ -1,4 +1,5 @@
 .not-found-page {
+  position: relative;
   display: flex;
   gap: 50px;
   flex-direction: column;
@@ -21,22 +22,22 @@
     color: var(--light-color);
     padding: 15px 20px;
     border-radius: 20px;
-    margin: 100px 10px;
+    margin: 100px 10px 20px 10px;
     justify-content: space-between;
-
   }
 }
-.comeback__btn {
-  background-color: var(--dark-color);
-  font-size: 24px;
-  text-align: center;
-  text-decoration: none;
+
+.comeback-to-main-page__btn {
+  display: flex;
+  background-color: var(--dark-color2);
   color: var(--light-color);
+  font-size: 24px;
+  text-decoration: none;
   transition: var(--transition-duration);
-  padding: 15px;
-  margin: 0 30px;
-  text-transform: uppercase;
-  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  border: solid 1px var(--light-color);
   &:hover {
     background: var(--light-color);
     color: var(--dark-color);

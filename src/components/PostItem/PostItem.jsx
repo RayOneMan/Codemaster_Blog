@@ -3,25 +3,23 @@ import { Link } from "react-router-dom";
 
 import Button from "../UI/Button/Button";
 
-
 import "./PostItem.scss";
 
-export default function PostItem({ id, body, title, remove, post }) {
+export default function PostItem({ remove, post }) {
   const { t } = useTranslation();
-
 
   return (
     <>
       <div className="post__item">
+        <div className="post__title">{post.id}. {post.title} </div>
         <div className="post__content">
-          <div className="post__title">{id}. {title} </div>
           <div className="post__text">
-            {body}
+            {post.body}
           </div>
         </div>
         <div className="post__list-btn">
           <Link
-            to={`/posts/${id}`}
+            to={`/posts/${post.id}`}
             className="post__link-open"
           >
             {t("OPEN")}

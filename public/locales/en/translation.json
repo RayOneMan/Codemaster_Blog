@@ -6,7 +6,6 @@
   "LANG": "Language",
   "TITLE_POST": "Title post",
   "POST_DESCRIPTION": "Post description",
-  "CREATE_NEW_POST": "Create new post",
   "SEARCH": "Search",
   "SORT": "Sorting",
   "SORT_BY_TITLE": "Sorting by title",
@@ -19,11 +18,16 @@
   "COMMENTS": "Comments",
   "ABOUT_SITE": "Information about the site",
   "NOT_FOUND": "Page not found",
-  "COMEBACK_TO_MAIN_PAGE": "Go back to the main page",
+  "COMEBACK_TO_MAIN": "Go back to main page",
+  "COMEBACK": "Go back",
   "COMMENT_NAME": "Name: ",
   "COMMENT_EMAIL":"Email: ",
   "COMMENT_BODY": "Сomment",
   "CREATE_NEW_COMMENT": "Comment on",
   "DELETE_COMMENT": "Delete comment",
-  "DELETE_POST": "Delete post"
+  "CREATE_NEW_POST": "Create new post",
+  "EDIT_POST": "Edit post №: ",
+  "DELETE_POST": "Delete post",
+  "EDIT_POST_BTN": "Edit post",
+  "CREATE_POST_BTN": "Create post"
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
 
   &__title {
     letter-spacing: 3px;
@@ -13,6 +13,8 @@
   }
 
   &__list {
+    display: grid;
+    gap: 20px;
     width: 100%;
     box-sizing: border-box;
     margin: 20px;
@@ -24,6 +26,11 @@
 }
 
 //animation
+.post {
+  display: grid;
+  gap: 20px;
+}
+
 .post-enter {
   opacity: 0;
 }
@@ -37,4 +44,12 @@
 .post-exit-active {
   opacity: 0;
   transition: all 500ms ease-in;
+}
+
+@media (max-width: 580px) {
+  .posts {
+    &__title {
+      font-size: 30px;
+    }
+  }
 }

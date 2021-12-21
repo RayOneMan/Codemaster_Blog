@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
 
-import "./CommentForm.scss";
+import * as Yup from "yup";
 import Button from "../UI/Button/Button";
 
+import "./CommentForm.scss";
 
 export default function PostForm({ onCreateNewComment }) {
   const { t } = useTranslation();
@@ -39,7 +39,6 @@ export default function PostForm({ onCreateNewComment }) {
                 className="error"
                 name="name" />
             </div>
-
             <div className="create-new-comment__inputs">
               <Field
                 type="text"
@@ -52,7 +51,6 @@ export default function PostForm({ onCreateNewComment }) {
                 className="error"
                 name="email" />
             </div>
-
             <div className="create-new-comment__inputs">
               <Field
                 type="text"
