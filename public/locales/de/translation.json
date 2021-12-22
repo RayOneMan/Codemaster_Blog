@@ -14,8 +14,10 @@
   "POST_LIST": "Beitragsliste",
   "OPEN": "Offen",
   "DELETE": "Löschen",
-  "POST_№": "Beitrag Nr.",
+  "POST_ID": "Beitrag Id.",
   "COMMENTS": "Kommentare",
+  "REQUIRED_FIELD": "Pflichtfeld",
+  "INVALID_EMAIL": "Ungültige E-Mail",
   "ABOUT_SITE": "Informationen zur Website",
   "NOT_FOUND": "Seite nicht gefunden",
   "COMEBACK_TO_MAIN": "Zurück zur Startseite",
@@ -29,5 +31,6 @@
   "EDIT_POST": "Edit post №: ",
   "DELETE_POST": "Beitrag entfernen",
   "EDIT_POST_BTN": "Beitrag bearbeiten",
-  "CREATE_POST_BTN": "Beitrag erstellen"
+  "CREATE_POST_BTN": "Beitrag erstellen",
+  "POSTS_NOT_FOUND": "Keine Einträge gefunden!"
 }

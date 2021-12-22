@@ -14,8 +14,10 @@
   "POST_LIST": "Список постов",
   "OPEN": "Открыть",
   "DELETE": "Удалить",
-  "POST_№": "Пост №:",
+  "POST_ID": "Пост Id:",
   "COMMENTS": "Комментарии",
+  "REQUIRED_FIELD": "Обязательное поле",
+  "INVALID_EMAIL": "Неправильный Email",
   "ABOUT_SITE": "Информация о сайте",
   "NOT_FOUND": "Страница не найдена",
   "COMEBACK_TO_MAIN": "Вернуться на главную страницу",
@@ -29,5 +31,6 @@
   "EDIT_POST": "Редактировать пост №: ",
   "DELETE_POST": "Удалить пост",
   "EDIT_POST_BTN": "Редактировать пост",
-  "CREATE_POST_BTN": "Создать пост"
+  "CREATE_POST_BTN": "Создать пост",
+  "POSTS_NOT_FOUND": "Посты не найдены!"
 }

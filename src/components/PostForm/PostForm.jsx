@@ -33,10 +33,10 @@ export default function PostForm({ onCreateNewPost, onEditPost, post }) {
       onSubmit={(post, { setStatus, setSubmitting }) => {
         setStatus();
         if (isAddMode) {
-          // const newPost = {
-          //   ...post, id: Date.now()
-          // };
-          onCreateNewPost(post);
+          const newPost = {
+            ...post, id: Date.now()
+          };
+          onCreateNewPost(newPost);
           setSubmitting(false);
         } else {
           onEditPost(id, post);

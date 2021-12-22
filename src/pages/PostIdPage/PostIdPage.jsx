@@ -41,7 +41,7 @@ const PostIdPage = () => {
   });
 
   const onRemoveCom = (Comment) => {
-    if (window.confirm(`${t("DELETE_COMMENT")} №${Comment.id}?`)) {
+    if (window.confirm(`${t("DELETE_COMMENT")} Id: ${Comment.id}?`)) {
       setComments(comments.filter(c => c.id !== Comment.id));
       PostService.onRemoveCommentByPostId(Comment.id);
     }
@@ -67,7 +67,7 @@ const PostIdPage = () => {
             className="material-icons comeback__btn">
             arrow_back <div className="comeback-btn-text"> {t("COMEBACK")} </div>
           </Link>
-          <div className="post-id-page__title">{t("POST_№")} {params.id}</div>
+          <div className="post-id-page__title">{t("POST_ID")} {params.id}</div>
           {postError && <h2>Error: ${postError} </h2>}
           {isPostLoading
             ? <Spinner />

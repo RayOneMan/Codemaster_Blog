@@ -14,8 +14,10 @@
   "POST_LIST": "Post list",
   "OPEN": "Open",
   "DELETE": "Delete",
-  "POST_№": "Post №:",
+  "POST_ID": "Post Id:",
   "COMMENTS": "Comments",
+  "REQUIRED_FIELD": "Required field",
+  "INVALID_EMAIL": "Invalid email",
   "ABOUT_SITE": "Information about the site",
   "NOT_FOUND": "Page not found",
   "COMEBACK_TO_MAIN": "Go back to main page",
@@ -29,5 +31,6 @@
   "EDIT_POST": "Edit post №: ",
   "DELETE_POST": "Delete post",
   "EDIT_POST_BTN": "Edit post",
-  "CREATE_POST_BTN": "Create post"
+  "CREATE_POST_BTN": "Create post",
+  "POSTS_NOT_FOUND": "Posts not found!"
 }

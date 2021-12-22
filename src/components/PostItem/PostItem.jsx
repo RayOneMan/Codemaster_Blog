@@ -5,13 +5,13 @@ import Button from "../UI/Button/Button";
 
 import "./PostItem.scss";
 
-export default function PostItem({ remove, post }) {
+export default function PostItem({ remove, post, number }) {
   const { t } = useTranslation();
 
   return (
     <>
       <div className="post__item">
-        <div className="post__title">{post.id}. {post.title} </div>
+        <div className="post__title">{number}. {post.title} </div>
         <div className="post__content">
           <div className="post__text">
             {post.body}

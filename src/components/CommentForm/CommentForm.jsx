@@ -14,10 +14,10 @@ export default function PostForm({ onCreateNewComment }) {
       initialValues={{ name: "", email:"", body: "" }}
       validationSchema={Yup.object({
         name: Yup.string()
-          .required("Обязательное поле!"),
-        email: Yup.string().email("Invalid email").required("Required"),
+          .required(t("REQUIRED_FIELD")),
+        email: Yup.string().email(t("INVALID_EMAIL")).required(t("REQUIRED_FIELD")),
         body: Yup.string()
-          .required("Обязательное поле!"),
+          .required(t("REQUIRED_FIELD")),
       })}
       onSubmit={ (newComment, { setSubmitting }) => {
         onCreateNewComment(newComment);

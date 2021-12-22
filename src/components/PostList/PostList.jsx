@@ -11,7 +11,7 @@ export default function PostList({ posts, setPosts, isPostsLoading }) {
   const { t } = useTranslation();
 
   const onRemovePost = (post) => {
-    if (window.confirm(`${t("DELETE_POST")} №${post.id}?`)) {
+    if (window.confirm(`${t("DELETE_POST")} Id: ${post.id}?`)) {
       setPosts(posts.filter(p => p.id !== post.id));
       PostService.onRemovePostId(post.id);
     }
@@ -20,7 +20,7 @@ export default function PostList({ posts, setPosts, isPostsLoading }) {
   if (!posts.length) {
     return (
       <h1 style={{ textAlign: "center" }}>
-        Посты не найдены!  {/* //перевод */}
+        {t("POSTS_NOT_FOUND")}
       </h1>
     );
   }
@@ -30,13 +30,14 @@ export default function PostList({ posts, setPosts, isPostsLoading }) {
       <div className="posts__title">{t("POST_LIST")}</div>
       <div className="posts__list">
         <TransitionGroup className="post">
-          {posts.map((post) =>
+          {posts.map((post, index) =>
             <CSSTransition
               key={post.id}
               timeout={1000}
               classNames="post"
             >
               <PostItem
+                number={index + 1}
                 remove={onRemovePost}
                 post={post}
               />
